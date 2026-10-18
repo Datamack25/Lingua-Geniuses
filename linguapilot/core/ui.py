@@ -106,7 +106,10 @@ header[data-testid="stHeader"] { background: transparent !important; height: 0 !
 .st-key-authbox .stTabs [data-baseweb="tab"] * { color:#FFFFFF !important; }
 .st-key-authbox .stTabs [aria-selected="true"] { background: #C9A227 !important; }
 .st-key-authbox .stTabs [aria-selected="true"] * { color:#14213D !important; }
-.st-key-authbox [data-testid="stForm"] { border-color: rgba(255,255,255,.18); }
+.st-key-authbox [data-testid="stForm"] { background: transparent !important; border-color: rgba(255,255,255,.18) !important; }
+.st-key-authbox label, .st-key-authbox [data-testid="stWidgetLabel"] p { color:#FFFFFF !important; opacity:1 !important; }
+.st-key-authbox .stTabs [data-baseweb="tab"] { border-radius:999px !important; padding:6px 16px !important; }
+.st-key-authbox .stTabs [data-baseweb="tab-highlight"], .st-key-authbox .stTabs [data-baseweb="tab-border"] { display:none; }
 .st-key-authbox input, .st-key-authbox textarea, .st-key-authbox div[data-baseweb="input"],
 .st-key-authbox div[data-baseweb="base-input"], .st-key-authbox div[data-baseweb="select"] > div {
     background: rgba(255,255,255,.10) !important; color: #FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important;

@@ -25,7 +25,9 @@ section[data-testid="stSidebar"] [role="radiogroup"] label:hover { background:rg
 div[data-testid="stMetric"] { background:#fff; border:1px solid var(--line); border-radius:16px; padding:14px 16px; }
 .hero { background: radial-gradient(1200px 300px at 10% -20%, rgba(201,162,39,.35), transparent),
         linear-gradient(135deg,#14213D 0%,#0E7490 100%); color:#fff; border-radius:22px; padding:28px 32px; margin-bottom:18px; }
-.hero h1 { color:#fff; margin:0 0 6px; font-size:2.1rem; }
+.hero h1, .hero .hero-title { color:#fff; margin:0 0 6px; font-size:2.3rem; font-weight:700; line-height:1.15;
+        font-family:'Fraunces', Georgia, serif; letter-spacing:-.01em; }
+.stApp .hero .hero-title { color:#F5C542 !important; }
 .hero p { color:#E0F2FE; margin:0; font-size:1.02rem; }
 .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px 20px; height:100%;
         box-shadow: 0 1px 2px rgba(20,33,61,.04); }
@@ -110,12 +112,16 @@ header[data-testid="stHeader"] { background: transparent !important; height: 0 !
 .st-key-authbox label, .st-key-authbox [data-testid="stWidgetLabel"] p { color:#FFFFFF !important; opacity:1 !important; }
 .st-key-authbox .stTabs [data-baseweb="tab"] { border-radius:999px !important; padding:6px 16px !important; }
 .st-key-authbox .stTabs [data-baseweb="tab-highlight"], .st-key-authbox .stTabs [data-baseweb="tab-border"] { display:none; }
-.st-key-authbox input, .st-key-authbox textarea, .st-key-authbox div[data-baseweb="input"],
-.st-key-authbox div[data-baseweb="base-input"], .st-key-authbox div[data-baseweb="select"] > div {
-    background: rgba(255,255,255,.10) !important; color: #FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important;
-    border-color: rgba(255,255,255,.25) !important; caret-color: #FFFFFF; }
-.st-key-authbox input::placeholder { color: rgba(255,255,255,.6) !important; }
-.st-key-authbox svg { fill: #FFFFFF !important; }
+/* champs de saisie : fond blanc + texte bleu nuit (lisibles sur le panneau sombre) */
+.stApp .st-key-authbox div[data-baseweb="input"], .stApp .st-key-authbox div[data-baseweb="base-input"],
+.stApp .st-key-authbox div[data-baseweb="select"] > div, .stApp .st-key-authbox input {
+    background: #FFFFFF !important; border-color: #FFFFFF !important; }
+.stApp .st-key-authbox input, .stApp .st-key-authbox div[data-baseweb="select"] *,
+.stApp .st-key-authbox div[data-baseweb="input"] * {
+    color: #14213D !important; -webkit-text-fill-color: #14213D !important; caret-color: #14213D; }
+.stApp .st-key-authbox input::placeholder { color: #6B7280 !important; -webkit-text-fill-color: #6B7280 !important; }
+.stApp .st-key-authbox div[data-baseweb="select"] svg, .stApp .st-key-authbox div[data-baseweb="input"] svg,
+.stApp .st-key-authbox button[aria-label] svg { fill: #14213D !important; }
 .st-key-authbox .stButton > button, .st-key-authbox [data-testid="stFormSubmitButton"] button {
     background:#C9A227 !important; border-color:#C9A227 !important; }
 .st-key-authbox .stButton > button *, .st-key-authbox [data-testid="stFormSubmitButton"] button * { color:#14213D !important; font-weight:800; }
@@ -133,7 +139,8 @@ def esc(s) -> str:
 
 
 def hero(title: str, subtitle: str):
-    st.markdown(f'<div class="hero"><h1>{esc(title)}</h1><p>{esc(subtitle)}</p></div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="hero"><div class="hero-title">{esc(title)}</div><p>{esc(subtitle)}</p></div>',
+                unsafe_allow_html=True)
 
 
 def card(title: str, body: str, extra: str = ""):

@@ -82,7 +82,8 @@ def quiz_runner(key: str, items: list[dict], context: str, title: str = ""):
         return
     if stt["i"] >= len(items):
         pct = round(100 * stt["good"] / len(items))
-        st.balloons() if pct >= 70 else None
+        if pct >= 70:
+            st.balloons()
         st.markdown(f'<div class="qcard" style="text-align:center"><div style="font-size:2.6rem">'
                     f'{"🏆" if pct >= 80 else "🌟" if pct >= 50 else "🌱"}</div>'
                     f'<div class="q">{stt["good"]} / {len(items)} bonnes réponses ({pct} %)</div>'
@@ -256,7 +257,7 @@ def page_dashboard():
         prof, strong, weak = ML.learner_profile(mast)
         st.markdown("### 🤖 Recommandation de Lumi")
         if not lvl:
-            msg = "Lancez le diagnostic adaptatif (12 questions) : Atlas situera votre niveau sur l'échelle CECRL."
+            msg = "Lancez le diagnostic adaptatif (15 questions) : Atlas situera votre niveau sur l'échelle CECRL."
             target = "🧭 Atlas · Diagnostic"
         elif weak != "-":
             ag = AG.agent_for_skill(weak)
@@ -283,11 +284,14 @@ def page_dashboard():
         for l in S.LANGS:
             lv = current_level(l)
             rows.append({"Langue": S.LANGS[l], "Niveau": lv or "à diagnostiquer", "Usage": D.USAGE.get(lv, "—")})
-        st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
+        ui.table(pd.DataFrame(rows), hide_index=True, width="stretch")
     with c4:
         st.markdown("### 🏆 Classement de la semaine")
         lb = G.leaderboard()
-        st.dataframe(lb, hide_index=True, width="stretch") if not lb.empty else st.caption("Pas encore de joueurs.")
+        if lb.empty:
+            st.caption("Pas encore de joueurs cette semaine.")
+        else:
+            ui.table(lb)
 
 
 def radar(mast: dict, height=330):
@@ -320,12 +324,12 @@ def page_atlas():
                 ss[key]["t0"] = time.time()
                 st.rerun()
         with c2:
-            st.dataframe(C("cecrl")[["level", "label", "usage"]].rename(
+            ui.table(C("cecrl")[["level", "label", "usage"]].rename(
                 columns={"level": "Niveau", "label": "Libellé", "usage": "Usage"}), hide_index=True, width="stretch")
         hist = S.user_rows("diagnostics", ss.user["user_id"], ss.lang)
         if not hist.empty:
             st.markdown("#### Historique")
-            st.dataframe(hist[["ts", "level", "score", "ml_level", "ml_confidence", "usage"]], hide_index=True,
+            ui.table(hist[["ts", "level", "score", "ml_level", "ml_confidence", "usage"]], hide_index=True,
                          width="stretch")
         return
 
@@ -409,7 +413,7 @@ def show_diag_result(fin: dict):
                 st.markdown(f"- {t}")
             ui.resource_list(AG.resources_for(ss.lang, sk, lvl, 3))
     with st.expander("🔍 Détail des réponses"):
-        st.dataframe(pd.DataFrame(fin["results"])[["level", "skill", "question", "choice", "answer", "correct"]],
+        ui.table(pd.DataFrame(fin["results"])[["level", "skill", "question", "choice", "answer", "correct"]],
                      hide_index=True, width="stretch")
 
 
@@ -653,7 +657,7 @@ def page_plume():
         rg = rg[rg.lang == ss.lang].drop(columns="lang").rename(columns={
             "sens": "Sens (FR)", "soutenu": "🎩 Soutenu", "courant": "🙂 Courant", "familier": "😎 Familier",
             "professionnel": "💼 Professionnel"})
-        st.dataframe(rg, hide_index=True, width="stretch")
+        ui.table(rg, hide_index=True, width="stretch")
         st.caption("Règle d'or : on choisit le registre selon l'interlocuteur, le canal (oral/écrit) et l'enjeu. "
                    "Le registre professionnel est neutre, précis et courtois ; le soutenu est réservé à l'écrit formel et aux discours.")
     with t3:
@@ -727,7 +731,10 @@ def page_lumi():
         c1, c2 = st.columns(2)
         with c1:
             st.markdown("#### Maîtrise par compétence")
-            radar(mast) if mast else st.info("Pas encore de données.")
+            if mast:
+                radar(mast)
+            else:
+                st.info("Pas encore de données.")
         with c2:
             st.markdown("#### Précision quotidienne")
             if not att.empty:

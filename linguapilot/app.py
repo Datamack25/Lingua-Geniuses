@@ -190,7 +190,6 @@ def auth_screen():
             seed_demo(uid)
             ss.user = auth.get_user(uid)
             st.rerun()
-        st.caption("Mots de passe hachés (PBKDF2-SHA256 salé). Données stockées en CSV dans data/user_data/.")
 
 
 # =============================================================== barre latérale

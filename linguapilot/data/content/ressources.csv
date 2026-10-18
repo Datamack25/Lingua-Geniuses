@@ -1,0 +1,32 @@
+lang,skill,type,titre,url,level_min,description
+en,grammaire,site,British Council – LearnEnglish Grammar,https://learnenglish.britishcouncil.org/grammar,A1,Explications et exercices gradués
+en,vocabulaire,site,Cambridge Dictionary,https://dictionary.cambridge.org,A1,"Définitions, prononciation UK/US"
+en,comprehension,vidéo,BBC Learning English,https://www.bbc.co.uk/learningenglish,A2,Vidéos courtes et cours
+en,comprehension,audio,VOA Learning English,https://learningenglish.voanews.com,A2,Actualités en anglais ralenti
+en,comprehension,vidéo,TED Talks,https://www.ted.com/talks,B2,Conférences avec transcriptions
+en,registre,guide,Purdue OWL – Professional Writing,https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/index.html,B2,Rédaction professionnelle
+en,culture,discours,American Rhetoric – Top 100 Speeches,https://www.americanrhetoric.com/top100speechesall.html,B2,Discours américains (texte + audio)
+en,culture,discours,Miller Center – Presidential Speeches,https://millercenter.org/the-presidency/presidential-speeches,B2,Archives des discours présidentiels
+en,expression,outil,Hemingway Editor,https://hemingwayapp.com,B1,Clarté et lisibilité de vos écrits
+fr,grammaire,site,Le Point du FLE,https://www.lepointdufle.net,A1,Annuaire d'exercices de grammaire
+fr,vocabulaire,site,CNRTL – Dictionnaire,https://www.cnrtl.fr/definition/,B1,"Définitions, synonymes, étymologie"
+fr,comprehension,vidéo,TV5MONDE – Apprendre le français,https://apprendre.tv5monde.com,A1,Vidéos et exercices par niveau
+fr,comprehension,audio,RFI – Français facile,https://francaisfacile.rfi.fr,A2,Journal en français facile
+fr,registre,guide,"Académie française – Dire, ne pas dire",https://www.academie-francaise.fr/dire-ne-pas-dire,B2,Bon usage et registres
+fr,culture,discours,Vie publique – Discours,https://www.vie-publique.fr/discours,B2,Discours officiels
+fr,culture,archives,INA – Archives audiovisuelles,https://www.ina.fr,B1,Archives historiques
+fr,expression,site,Projet Voltaire (orthographe),https://www.projet-voltaire.fr,B1,Orthographe et expression écrite
+es,grammaire,site,Centro Virtual Cervantes,https://cvc.cervantes.es,A1,Ressources de l'Instituto Cervantes
+es,vocabulaire,site,Diccionario de la RAE,https://dle.rae.es,A2,Dictionnaire de référence
+es,registre,guide,FundéuRAE,https://www.fundeu.es,B2,Bon usage de l'espagnol
+es,comprehension,vidéo,RTVE Play,https://www.rtve.es/play/,B1,Télévision publique espagnole
+es,comprehension,site,ProfeDeELE,https://www.profedeele.es,A1,Vidéos et fiches ELE
+es,culture,discours,Nobel Prize – Lectures en espagnol,https://www.nobelprize.org/prizes/literature/,C1,"Discours Nobel (García Márquez, Neruda…)"
+es,expression,site,Ver-taal – exercices,https://www.ver-taal.com,B1,Exercices de compréhension et grammaire
+ht,grammaire,guide,Cambridge – A learner's dictionary of Haitian Creole,https://www.langcen.cam.ac.uk/resources/langh/data/hc_102.html,A1,Référence d'apprentissage
+ht,vocabulaire,site,HaitiHub – Learn Haitian Creole,https://haitihub.com/learn-haitian-creole-free/,A1,Cours gratuits
+ht,comprehension,vidéo,MIT-Ayiti,https://haiti.mit.edu,B1,Contenus pédagogiques en kreyòl
+ht,comprehension,cours,MIT OCW – Inisyativ MIT-Ayiti,https://ocw.mit.edu/courses/res-24-002-mit-haiti-initiative-inisyativ-mit-ayiti-spring-2023,B2,Cours en kreyòl
+ht,culture,lecture,Wikipedya kreyòl,https://ht.wikipedia.org,B1,Lecture authentique
+ht,vocabulaire,dictionnaire,Potomitan – Diksyonè kreyòl (PDF),https://www.potomitan.info/ayiti/berrouet-oriol/diksyone_kreyol.pdf,B1,Lexique kreyòl
+ht,culture,annuaire,HaitiHub – Haiti & Kreyòl on the web,https://haitihub.com/resources,A2,Annuaire de ressources

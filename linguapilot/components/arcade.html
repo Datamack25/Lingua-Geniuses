@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --navy:#14213D; --teal:#0E7490; --gold:#C9A227; --ok:#059669; --ko:#E11D48; --bg:#F8F7F2; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: "Plus Jakarta Sans", system-ui, sans-serif; background:transparent; color:var(--navy); }
+  .wrap { background:linear-gradient(135deg,#14213D 0%,#0E7490 100%); border-radius:18px; padding:18px; color:#fff; }
+  .hud { display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between; margin-bottom:14px; }
+  .pill { background:rgba(255,255,255,.14); padding:8px 14px; border-radius:999px; font-weight:700; font-size:14px; }
+  .pill b { color:var(--gold); }
+  button.start { background:var(--gold); color:var(--navy); border:0; padding:10px 18px; border-radius:999px; font-weight:800; cursor:pointer; font-size:14px; }
+  button.start:hover { filter:brightness(1.08); }
+  .board { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .col { display:flex; flex-direction:column; gap:8px; }
+  .card { background:#fff; color:var(--navy); border-radius:12px; padding:12px 10px; text-align:center; font-weight:700; cursor:pointer;
+          transition:transform .12s, box-shadow .12s, background .2s; box-shadow:0 2px 0 rgba(0,0,0,.15); user-select:none; font-size:15px; }
+  .card:hover { transform:translateY(-2px); }
+  .card.sel { outline:3px solid var(--gold); }
+  .card.ok { background:#D1FAE5; color:var(--ok); pointer-events:none; opacity:.55; }
+  .card.ko { animation:shake .35s; background:#FFE4E6; }
+  @keyframes shake { 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
+  .msg { text-align:center; font-size:15px; min-height:22px; margin-top:12px; font-weight:600; }
+  .bar { height:6px; background:rgba(255,255,255,.2); border-radius:6px; overflow:hidden; margin-bottom:12px; }
+  .bar i { display:block; height:100%; width:100%; background:var(--gold); transition:width 1s linear; }
+  .end { text-align:center; padding:30px 10px; }
+  .end h2 { margin:0 0 6px; font-size:28px; }
+  canvas { position:fixed; inset:0; pointer-events:none; }
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div class="wrap">
+  <div class="hud">
+    <span class="pill">⏱️ <b id="time">60</b> s</span>
+    <span class="pill">⭐ Score <b id="score">0</b></span>
+    <span class="pill">🔥 Combo <b id="combo">x1</b></span>
+    <span class="pill">🏆 Record <b id="best">0</b></span>
+    <button class="start" id="go">▶ Jouer</button>
+  </div>
+  <div class="bar"><i id="bar"></i></div>
+  <div id="stage"><div class="end"><h2>Mots croisés éclair ⚡</h2><p>Associez chaque mot à sa traduction avant la fin du chrono. Les combos multiplient vos points !</p></div></div>
+  <div class="msg" id="msg"></div>
+</div>
+<script>
+const DATA = __DATA__;
+let score=0, combo=1, time=60, timer=null, sel=null, left=0, round=0;
+const $=id=>document.getElementById(id);
+let best = 0; try { best = +localStorage.getItem("lp_best_"+DATA.lang) || 0; } catch(e) {}
+$("best").textContent = best;
+const cheers = ["Bravo !","Excellent !","Superbe !","Quelle mémoire !","Inarrêtable 🔥"];
+const kind = ["Presque ! Réessayez 🌱","Pas grave, on continue 💪","Ça viendra 🤝"];
+
+function shuffle(a){ for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+function deal(){
+  round++;
+  const pairs = shuffle(DATA.pairs.slice()).slice(0,5);
+  left = pairs.length;
+  const L = shuffle(pairs.map((p,i)=>({t:p[0],k:i}))), R = shuffle(pairs.map((p,i)=>({t:p[1],k:i})));
+  $("stage").innerHTML = `<div class="board"><div class="col" id="cl"></div><div class="col" id="cr"></div></div>`;
+  L.forEach(c=>$("cl").appendChild(mk(c,"l"))); R.forEach(c=>$("cr").appendChild(mk(c,"r")));
+}
+function mk(c,side){
+  const d=document.createElement("div"); d.className="card"; d.textContent=c.t; d.dataset.k=c.k; d.dataset.s=side;
+  d.onclick=()=>pick(d); return d;
+}
+function pick(d){
+  if(!timer) return;
+  if(!sel || sel.dataset.s===d.dataset.s){ if(sel) sel.classList.remove("sel"); sel=d; d.classList.add("sel"); return; }
+  if(sel.dataset.k===d.dataset.k){
+    [sel,d].forEach(x=>{x.classList.remove("sel");x.classList.add("ok");});
+    score += 10*combo; combo=Math.min(5,combo+1); left--;
+    $("msg").textContent = cheers[Math.floor(Math.random()*cheers.length)];
+    burst(12);
+    if(left===0){ time=Math.min(60,time+5); setTimeout(deal,350); $("msg").textContent="Manche réussie ! +5 s ⏱️"; }
+  } else {
+    [sel,d].forEach(x=>{x.classList.remove("sel");x.classList.add("ko");setTimeout(()=>x.classList.remove("ko"),400);});
+    combo=1; $("msg").textContent = kind[Math.floor(Math.random()*kind.length)];
+  }
+  sel=null; hud();
+}
+function hud(){ $("score").textContent=score; $("combo").textContent="x"+combo; $("time").textContent=time; $("bar").style.width=(time/60*100)+"%"; }
+function start(){
+  score=0; combo=1; time=60; round=0; sel=null; $("msg").textContent=""; deal(); hud();
+  clearInterval(timer);
+  timer=setInterval(()=>{ time--; hud(); if(time<=0) end(); },1000);
+  $("go").textContent="↻ Rejouer";
+}
+function end(){
+  clearInterval(timer); timer=null;
+  if(score>best){ best=score; try{localStorage.setItem("lp_best_"+DATA.lang,best);}catch(e){} $("best").textContent=best; burst(80); }
+  $("stage").innerHTML = `<div class="end"><h2>🎉 ${score} points</h2><p>${round} manche(s) jouée(s). ${score>=best?"Nouveau record !":"Record : "+best}</p><p>Chaque partie renforce votre mémoire à long terme. À tout de suite !</p></div>`;
+}
+$("go").onclick=start;
+
+// confettis
+const cv=$("fx"), cx=cv.getContext("2d"); let P=[];
+function size(){ cv.width=innerWidth; cv.height=innerHeight; } size(); addEventListener("resize",size);
+function burst(n){ for(let i=0;i<n;i++) P.push({x:innerWidth/2,y:innerHeight/3,vx:(Math.random()-.5)*8,vy:Math.random()*-7-2,l:60,c:["#C9A227","#0E7490","#F472B6","#34D399"][i%4]}); }
+(function loop(){ cx.clearRect(0,0,cv.width,cv.height); P=P.filter(p=>p.l-->0); P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.25;cx.fillStyle=p.c;cx.fillRect(p.x,p.y,6,6);}); requestAnimationFrame(loop); })();
+</script>
+</body>
+</html>

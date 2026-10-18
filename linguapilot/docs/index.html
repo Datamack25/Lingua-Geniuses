@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LinguaPilot Academy</title>
+<meta name="description" content="Plateforme d'apprentissage multilingue à 5 agents : anglais, français, espagnol, créole haïtien. Diagnostic CECRL, machine learning, certificats PDF.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#14213D; --teal:#0E7490; --gold:#C9A227; --bg:#F8F7F2; --ink:#1F2937; --muted:#6B7280; --card:#fff; --line:#E7E5DF; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0F172A; --ink:#E5E7EB; --muted:#94A3B8; --card:#16213A; --line:#24324F; } }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Plus Jakarta Sans',system-ui,sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+  a { color:inherit; }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 16px; }
+  header { background:radial-gradient(900px 300px at 10% -10%, rgba(201,162,39,.4), transparent), linear-gradient(135deg,#14213D,#0E7490); color:#fff; padding:72px 0 88px; }
+  nav { display:flex; justify-content:space-between; align-items:center; margin-bottom:56px; }
+  nav b { font-size:1.2rem; }
+  .btn { display:inline-block; background:var(--gold); color:#14213D; font-weight:800; padding:12px 22px; border-radius:999px; text-decoration:none; }
+  .btn.ghost { background:transparent; border:1.5px solid rgba(255,255,255,.6); color:#fff; margin-left:8px; }
+  h1 { font-family:'Fraunces',serif; font-size:clamp(2.2rem,5vw,3.6rem); line-height:1.1; margin:0 0 16px; max-width:780px; }
+  header p { font-size:1.15rem; color:#E0F2FE; max-width:640px; margin:0 0 28px; }
+  .flags { margin-top:28px; font-size:1.6rem; letter-spacing:.3rem; }
+  section { padding:64px 0; }
+  h2 { font-family:'Fraunces',serif; font-size:2rem; margin:0 0 8px; }
+  .sub { color:var(--muted); margin:0 0 32px; }
+  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px; }
+  .card .e { font-size:2rem; }
+  .card h3 { margin:6px 0 6px; font-size:1.1rem; }
+  .card p { margin:0; color:var(--muted); font-size:.95rem; }
+  .agent { border-top:5px solid var(--c); }
+  .steps { counter-reset:s; }
+  .steps .card::before { counter-increment:s; content:counter(s); display:inline-flex; width:34px; height:34px; border-radius:50%; background:var(--navy); color:#fff; align-items:center; justify-content:center; font-weight:800; margin-bottom:8px; }
+  table { width:100%; border-collapse:collapse; background:var(--card); border-radius:14px; overflow:hidden; }
+  th, td { padding:12px 14px; border-bottom:1px solid var(--line); text-align:left; font-size:.95rem; }
+  th { background:var(--navy); color:#fff; }
+  .lv { display:inline-block; min-width:42px; text-align:center; font-weight:800; color:#fff; background:var(--teal); border-radius:8px; padding:2px 8px; }
+  footer { padding:32px 0; color:var(--muted); font-size:.9rem; text-align:center; border-top:1px solid var(--line); }
+  @media (max-width:600px) { .btn.ghost { margin:10px 0 0; } header { padding:40px 0 56px; } nav { margin-bottom:32px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav><b>🧭 LinguaPilot Academy</b><a class="btn" href="https://share.streamlit.io" id="cta-top">Ouvrir l'app</a></nav>
+    <h1>Apprenez 4 langues avec 5 agents qui vous connaissent vraiment.</h1>
+    <p>Diagnostic adaptatif CECRL, parcours personnalisé par machine learning, discours, histoires, chansons et culture — puis un certificat PDF vérifiable.</p>
+    <a class="btn" href="https://share.streamlit.io" id="cta">Commencer gratuitement</a><a class="btn ghost" href="#agents">Découvrir les agents</a>
+    <div class="flags">🇬🇧 🇫🇷 🇪🇸 🇭🇹</div>
+  </div>
+</header>
+
+<section id="agents">
+  <div class="wrap">
+    <h2>Cinq agents, une mission : votre progression</h2>
+    <p class="sub">Chaque agent prend en charge un ou plusieurs aspects de la compétence linguistique.</p>
+    <div class="grid">
+      <div class="card agent" style="--c:#1E3A8A"><div class="e">🧭</div><h3>Atlas</h3><p>Diagnostic adaptatif, évaluation certifiante, certificats PDF.</p></div>
+      <div class="card agent" style="--c:#7C3AED"><div class="e">🧱</div><h3>Nova</h3><p>Grammaire et vocabulaire, répétition espacée, arcade.</p></div>
+      <div class="card agent" style="--c:#B45309"><div class="e">🎧</div><h3>Griot</h3><p>Compréhension et culture : discours, histoires, chansons, proverbes.</p></div>
+      <div class="card agent" style="--c:#BE185D"><div class="e">✍️</div><h3>Plume</h3><p>Analyse de vos écrits et registres soutenu, courant, familier, professionnel.</p></div>
+      <div class="card agent" style="--c:#047857"><div class="e">🌱</div><h3>Lumi</h3><p>Coach : suivi ML, notifications, quêtes, badges et motivation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--card);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <h2>Votre parcours</h2>
+    <p class="sub">Diagnostiquer d'abord, améliorer ensuite.</p>
+    <div class="grid steps">
+      <div class="card"><h3>Diagnostic</h3><p>12 questions qui s'adaptent à vous ; niveau fusionné règle CECRL + RandomForest.</p></div>
+      <div class="card"><h3>Plan personnalisé</h3><p>Conseils par compétence et liens vers les meilleures ressources gratuites.</p></div>
+      <div class="card"><h3>Entraînement ludique</h3><p>Exercices visés à ~70 % de réussite, XP, séries, badges, arcade.</p></div>
+      <div class="card"><h3>Certification</h3><p>Évaluation certifiante et certificat PDF avec numéro de vérification.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Niveaux et usages</h2>
+    <p class="sub">Référentiel : Cadre européen commun de référence pour les langues (Conseil de l'Europe).</p>
+    <table>
+      <tr><th>Niveau</th><th>Libellé</th><th>Usage</th></tr>
+      <tr><td><span class="lv">A1</span></td><td>Débutant</td><td>Usage personnel élémentaire</td></tr>
+      <tr><td><span class="lv">A2</span></td><td>Élémentaire</td><td>Usage personnel</td></tr>
+      <tr><td><span class="lv">B1</span></td><td>Intermédiaire</td><td>Usage social et voyage</td></tr>
+      <tr><td><span class="lv">B2</span></td><td>Avancé indépendant</td><td>Usage professionnel opérationnel</td></tr>
+      <tr><td><span class="lv">C1</span></td><td>Autonome / Professionnel</td><td>Usage professionnel avancé</td></tr>
+      <tr><td><span class="lv">C2</span></td><td>Maîtrise</td><td>Usage expert / quasi natif</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>LinguaPilot Academy · Python · Streamlit · scikit-learn · HTML/JavaScript — certificats internes, indicatifs, référencés CECRL.</footer>
+<script>
+  // Remplacez par l'URL de votre app Streamlit Cloud après déploiement
+  const APP_URL = "https://share.streamlit.io";
+  document.querySelectorAll("#cta,#cta-top").forEach(a => a.href = APP_URL);
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+lang,orateur,titre,annee,registre,level,themes,url,ecouter
+en,Martin Luther King Jr.,I Have a Dream,1963,soutenu / oratoire,C1,"droits civiques, anaphore",https://www.americanrhetoric.com/top100speechesall.html,https://www.youtube.com/results?search_query=Martin+Luther+King+Jr.+I+Have+a+Dream
+en,John F. Kennedy,Inaugural Address,1961,soutenu / oratoire,C1,"chiasme, engagement civique",https://www.americanrhetoric.com/top100speechesall.html,https://www.youtube.com/results?search_query=John+F.+Kennedy+Inaugural+Address
+en,Abraham Lincoln,Gettysburg Address,1863,soutenu,C2,"concision, démocratie",https://millercenter.org/the-presidency/presidential-speeches,https://www.youtube.com/results?search_query=Abraham+Lincoln+Gettysburg+Address
+en,Barack Obama,A More Perfect Union,2008,soutenu / argumentatif,C1,"identité, nuance",https://millercenter.org/the-presidency/presidential-speeches,https://www.youtube.com/results?search_query=Barack+Obama+A+More+Perfect+Union
+en,Franklin D. Roosevelt,First Inaugural Address,1933,soutenu,C1,"crise, confiance",https://www.americanrhetoric.com/top100speechesall.html,https://www.youtube.com/results?search_query=Franklin+D.+Roosevelt+First+Inaugural+Address
+en,Top 100 American Speeches,Corpus complet (texte + audio),0,varié,B2,corpus de référence,https://www.americanrhetoric.com/top100speechesall.html,
+en,Miller Center,Presidential Speeches Archive,0,varié,B2,archives présidentielles,https://millercenter.org/the-presidency/presidential-speeches,
+fr,Simone Veil,Discours sur l'IVG à l'Assemblée,1974,soutenu / argumentatif,C1,"droits des femmes, rhétorique parlementaire",https://www.vie-publique.fr/discours,https://www.youtube.com/results?search_query=Simone+Veil+Discours+sur+l'IVG+à+l'Assemblée
+fr,Charles de Gaulle,Appel du 18 juin,1940,soutenu / oratoire,B2,résistance,https://www.ina.fr,https://www.youtube.com/results?search_query=Charles+de+Gaulle+Appel+du+18+juin
+fr,Robert Badinter,Abolition de la peine de mort,1981,soutenu,C1,"justice, argumentation",https://www.vie-publique.fr/discours,https://www.youtube.com/results?search_query=Robert+Badinter+Abolition+de+la+peine+de+mort
+fr,Vie publique,Recueil des discours publics,0,varié,B2,corpus officiel français,https://www.vie-publique.fr/discours,
+es,Gabriel García Márquez,La soledad de América Latina (Nobel),1982,soutenu / littéraire,C1,identité latino-américaine,https://www.nobelprize.org/prizes/literature/,https://www.youtube.com/results?search_query=Gabriel+García+Márquez+La+soledad+de+América+Latina+(Nobel)
+es,Pablo Neruda,Discurso Nobel,1971,littéraire,C2,"poésie, engagement",https://www.nobelprize.org/prizes/literature/,https://www.youtube.com/results?search_query=Pablo+Neruda+Discurso+Nobel
+es,Mario Vargas Llosa,Elogio de la lectura y la ficción (Nobel),2010,soutenu,C1,"lecture, liberté",https://www.nobelprize.org/prizes/literature/,https://www.youtube.com/results?search_query=Mario+Vargas+Llosa+Elogio+de+la+lectura+y+la+ficción+(Nobel)
+ht,MIT-Ayiti,Leçons et vidéos en kreyòl (sciences),0,courant / académique,B2,kreyòl académique,https://haiti.mit.edu,
+ht,MIT OpenCourseWare,Inisyativ MIT-Ayiti (cours en kreyòl),2023,académique,B2,pédagogie en kreyòl,https://ocw.mit.edu/courses/res-24-002-mit-haiti-initiative-inisyativ-mit-ayiti-spring-2023,https://www.youtube.com/results?search_query=MIT+OpenCourseWare+Inisyativ+MIT-Ayiti+(cours+en+kreyòl)
+ht,Wikipedya,Encyclopédie en kreyòl ayisyen,0,écrit standard,B1,lecture authentique,https://ht.wikipedia.org,

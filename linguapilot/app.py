@@ -96,7 +96,8 @@ def quiz_runner(key: str, items: list[dict], context: str, title: str = ""):
     q = items[stt["i"]]
     st.progress(stt["i"] / len(items), text=f"{title} Question {stt['i'] + 1} / {len(items)}")
     tags = (f'<span class="tag teal">{q["level"]}</span><span class="tag">{S.SKILLS[q["skill"]]}</span>'
-            + (f'<span class="tag gold">p(réussite) ML : {int(q["p_success"] * 100)} %</span>' if "p_success" in q else ""))
+            + (f'<span class="tag gold">p(réussite) ML : {int(q["p_success"] * 100)} %</span>' if "p_success" in q else "")
+            + (f'<span class="tag green">📜 {ui.esc(q["source"])}</span>' if q.get("source") else ""))
     st.markdown(f'<div class="qcard">{tags}<div class="q" style="margin-top:8px">{ui.esc(q["question"])}</div></div>',
                 unsafe_allow_html=True)
     choice = st.radio("Votre réponse", q["shuffled"], index=None, key=f"{key}_r_{stt['i']}_{q['id']}",
@@ -141,7 +142,7 @@ def seed_demo(uid: str):
 
 
 def auth_screen():
-    ui.hero("LinguaPilot Academy", "Anglais · Français · Espagnol · Créole haïtien — 5 agents IA pour diagnostiquer, "
+    ui.hero("LinguaPilot Academy", "Anglais · Français · Espagnol · Créole haïtien — une plateforme pour diagnostiquer, "
             "entraîner, certifier et vous faire aimer apprendre.")
     c1, c2 = st.columns([1.15, 1])
     with c1:
@@ -154,7 +155,7 @@ def auth_screen():
                     'machine learning · 2. Parcours personnalisé par agent · 3. Contenus authentiques : discours, '
                     'histoires, chansons, culture · 4. Évaluation certifiante et certificat PDF vérifiable.</p></div>',
                     unsafe_allow_html=True)
-    with c2:
+    with c2, st.container(key="authbox"):
         t1, t2 = st.tabs(["🔐 Connexion", "✨ Créer un compte"])
         with t1:
             with st.form("login"):
@@ -353,7 +354,8 @@ def page_atlas():
     if q is None:
         fin = D.finalize(stt, models()); save_diag(fin); stt["final"] = fin; st.rerun()
     st.progress(len(stt["asked"]) / D.N_DIAG, text=f"Question {len(stt['asked']) + 1} / {D.N_DIAG}")
-    st.markdown(f'<div class="qcard"><span class="tag">{S.SKILLS[q["skill"]]}</span>'
+    src = f'<span class="tag green">📜 {ui.esc(q["source"])}</span>' if q.get("source") else ""
+    st.markdown(f'<div class="qcard"><span class="tag">{S.SKILLS[q["skill"]]}</span>{src}'
                 f'<div class="q" style="margin-top:8px">{ui.esc(q["question"])}</div></div>', unsafe_allow_html=True)
     choice = st.radio("Réponse", q["shuffled"], index=None, key=f"dq_{q['id']}", label_visibility="collapsed")
     if st.button("Valider ✔", type="primary", disabled=choice is None):
@@ -585,7 +587,14 @@ def page_plume():
     uid = ss.user["user_id"]
     ui.agent_banner(a, "Grille d'évaluation inspirée des critères qualitatifs du CECRL : étendue, correction, "
                        "cohérence et adéquation sociolinguistique (registre).")
-    t1, t2, t3 = st.tabs(["📝 Analyse de mon texte", "🎩 Table des registres", "🎯 Défis registres"])
+    names = ["📝 Analyse de mon texte", "🎩 Table des registres", "🎯 Défis registres"]
+    if ss.lang == "ht":
+        names.append("🏛️ Òtograf ofisyèl (AKA)")
+    tabs = st.tabs(names)
+    t1, t2, t3 = tabs[:3]
+    if ss.lang == "ht":
+        with tabs[3]:
+            page_ortho_ht()
     with t1:
         c1, c2 = st.columns([1.4, 1])
         with c1:
@@ -670,6 +679,38 @@ def page_plume():
         st.divider()
         bank = BANK[(BANK.lang == ss.lang) & (BANK.skill == "registre")]
         quiz_runner(f"plume_{ss.lang}", prep(bank.sample(frac=1, random_state=1)), "plume", "Registres ·")
+
+
+def page_ortho_ht():
+    st.markdown("#### L'orthographe officielle du kreyòl ayisyen")
+    st.markdown("Référence : orthographe officielle de 1980, confirmée par la **Premye rezolisyon sou òtograf kreyòl "
+                "ayisyen an** de l'**Akademi Kreyòl Ayisyen** (juin 2017), institution créée par la loi du 7 avril 2014 "
+                "pour fixer la norme du kreyòl et garantir les droits linguistiques.")
+    c = st.columns(3)
+    for col, (t, d) in zip(c, [("1 son = 1 graphie", "Chak fonèm toujou ekri menm jan."),
+                               ("1 graphie = 1 son", "Chak grafi toujou li menm jan."),
+                               ("Aucune lettre muette", "Pa gen lèt ki pa pwononse.")]):
+        with col:
+            ui.card(t, d)
+    st.write("")
+    o = C("orthographe_ht")
+    for typ in ["voyelle orale", "voyelle nasale", "consonne", "semi-voyelle"]:
+        sub = o[o.type.str.startswith(typ)]
+        st.markdown(f"**{typ.capitalize()}s ({len(sub)})**")
+        st.markdown(" ".join(f'<span class="tag teal" title="{ui.esc(r.sens)}">{ui.esc(r.grapheme)} · {ui.esc(r.exemple)}</span>'
+                             for _, r in sub.iterrows()), unsafe_allow_html=True)
+    st.markdown("""
+**Points clés pour bien écrire**
+- **è / ò** notent les voyelles ouvertes : *fè, lekòl*. Devant *n*, l'accent sépare la voyelle du *n* : *pèn* (peine) ≠ *pen* (pain), *pàn* (panne) ≠ *pan* (paon).
+- **Pas de c, q, x, é** : *lekòl, ki, ekzamen, bebe*.
+- **g** est toujours dur (*gade*), **s** se prononce toujours [s] (*kase*), **h** se prononce (*hont*).
+- **Formes courtes** des pronoms (m, w, l, n, y) : écrites séparément du mot suivant — *m ap vini, l te la*.
+- **Déterminant** : *la* (consonne orale), *a* (voyelle orale), *an* (voyelle nasale), *nan* (consonne nasale) ; pluriel *yo*.
+""")
+    ui.resource_list(C("ressources").query("lang == 'ht' and type in ['officiel', 'guide']"))
+    st.markdown("#### 🎯 Entraînement orthographe")
+    bank = BANK[(BANK.lang == "ht") & BANK.source.str.contains("Òtograf", na=False)]
+    quiz_runner("ortho_ht", prep(bank.sample(frac=1, random_state=2)), "plume", "Òtograf ·")
 
 
 # --------------------------------------------------------------- Lumi

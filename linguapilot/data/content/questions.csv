@@ -1,105 +1,174 @@
-id,lang,level,skill,agent,question,options,answer,explanation
-en-001,en,A1,grammaire,nova,She ___ a teacher.,is|are|am|be,is,Le verbe 'to be' à la 3e personne du singulier est 'is'.
-en-002,en,A1,vocabulaire,nova,What is the opposite of 'cold'?,hot|wet|old|slow,hot,'Hot' (chaud) est le contraire de 'cold' (froid).
-en-003,en,A1,grammaire,nova,I ___ coffee every morning.,drink|drinks|drinking|drunk,drink,"Présent simple, 1re personne : pas de -s."
-en-004,en,A1,comprehension,griot,Tom has a dog. The dog is brown. — What colour is the dog?,Brown|Black|White|Grey,Brown,Le texte dit : 'The dog is brown'.
-en-005,en,A2,grammaire,nova,Yesterday we ___ to the cinema.,went|go|gone|going,went,'Yesterday' → prétérit ; 'go' est irrégulier : went.
-en-006,en,A2,grammaire,nova,There isn't ___ milk left.,any|some|many|a,any,"Dans une phrase négative, on utilise 'any'."
-en-007,en,A2,registre,plume,Which request is the most polite?,"Could I have some water, please?|Give me water.|Water now.|I want water.","Could I have some water, please?","'Could I…, please?' est la formule de politesse standard."
-en-008,en,A2,vocabulaire,nova,A place where you borrow books is a…,library|bookshop|bakery|museum,library,"Faux ami : 'library' = bibliothèque, 'bookshop' = librairie."
-en-009,en,B1,grammaire,nova,"If it rains tomorrow, we ___ at home.",will stay|would stay|stayed|stay,will stay,Premier conditionnel : if + présent → will + base verbale.
-en-010,en,B1,grammaire,nova,I've lived here ___ 2019.,since|for|from|during,since,'Since' + point de départ ; 'for' + durée.
-en-011,en,B1,registre,plume,Which is the most informal way to say 'I am very tired'? (UK),I'm knackered.|I am exhausted.|I feel fatigued.|I am experiencing fatigue.,I'm knackered.,'Knackered' est un mot familier britannique.
-en-012,en,B1,culture,griot,"In the United States, Thanksgiving is celebrated in…",November|July|December|March,November,Le 4e jeudi de novembre.
-en-013,en,B2,grammaire,nova,"By the time we arrived, the film ___.",had started|has started|started|was starting,had started,Antériorité dans le passé → past perfect.
-en-014,en,B2,grammaire,nova,She suggested ___ earlier.,leaving|to leave|leave|we leaving,leaving,'Suggest' + verbe en -ing (ou 'that we leave').
-en-015,en,B2,registre,plume,Best closing for a formal business email:,"Kind regards,|Cheers mate,|Later!|Love,","Kind regards,",'Kind regards' est neutre et professionnel.
-en-016,en,B2,vocabulaire,nova,'To postpone' means…,to delay to a later time|to cancel|to bring forward|to announce,to delay to a later time,Postpone = reporter.
-en-017,en,C1,grammaire,nova,"Not only ___ late, but he also forgot the documents.",did he arrive|he arrived|he did arrive|arrived he,did he arrive,Après 'Not only' en tête de phrase : inversion sujet-auxiliaire.
-en-018,en,C1,grammaire,nova,Hardly had she sat down ___ the phone rang.,when|than|then|that,when,Structure figée : Hardly… when (No sooner… than).
-en-019,en,C1,vocabulaire,nova,The report ___ the need for urgent reform.,underscores|undermines|understates|undergoes,underscores,"'Underscore' = souligner, mettre en évidence."
-en-020,en,C1,culture,griot,The 'I Have a Dream' speech (1963) was delivered by…,Martin Luther King Jr.|John F. Kennedy|Abraham Lincoln|Barack Obama,Martin Luther King Jr.,"Discours prononcé lors de la Marche sur Washington, 28 août 1963."
-en-021,en,C2,grammaire,nova,"His argument, ___ compelling, failed to persuade the committee.",albeit|despite|however|although of,albeit,'Albeit' (quoique) introduit une concession sans verbe conjugué.
-en-022,en,C2,vocabulaire,nova,'To pay lip service to something' means…,to express support without acting on it|to speak loudly|to pay a fee|to sing in public,to express support without acting on it,Soutenir en paroles seulement.
-en-023,en,C2,grammaire,nova,Choose the correct formal subjunctive:,It is essential that he be informed.|It is essential that he will be informed.|It is essential that he being informed.|It is essential that he to be informed.,It is essential that he be informed.,Subjonctif 'mandatif' : base verbale après 'essential that'.
-en-024,en,C2,culture,griot,'Ask not what your country can do for you…' — which president?,John F. Kennedy|Franklin D. Roosevelt|Ronald Reagan|Bill Clinton,John F. Kennedy,"Discours d'investiture de JFK, 20 janvier 1961."
-en-025,en,B1,comprehension,griot,"'I'm running late, start without me.' — What does the speaker mean?",They will arrive late|They are jogging|They are not coming|They are early,They will arrive late,'Running late' = être en retard.
-en-026,en,B2,comprehension,griot,'The meeting has been pushed back to Friday.' — The meeting is now…,"later, on Friday|earlier, on Friday|cancelled|on Monday","later, on Friday",'Push back' = repousser à plus tard.
-fr-001,fr,A1,grammaire,nova,Je ___ étudiante.,suis|es|est|sommes,suis,"Être, 1re personne du singulier : je suis."
-fr-002,fr,A1,vocabulaire,nova,Le contraire de « grand » est…,petit|gros|long|haut,petit,Grand ≠ petit.
-fr-003,fr,A1,grammaire,nova,Nous ___ du pain.,mangeons|mangez|mange|mangent,mangeons,Verbes en -ger : nous mangeons (le e garde le son [ʒ]).
-fr-004,fr,A1,comprehension,griot,« Marie habite à Lyon avec son chat. » — Où habite Marie ?,À Lyon|À Paris|À Marseille|À Lille,À Lyon,Le texte dit : à Lyon.
-fr-005,fr,A2,grammaire,nova,"Hier, je ___ au marché.",suis allé(e)|vais|irai|allais,suis allé(e),Action ponctuelle passée → passé composé avec être.
-fr-006,fr,A2,grammaire,nova,Je parle à Paul. → Je ___ parle.,lui|le|leur|y,lui,Parler À quelqu'un → COI singulier : lui.
-fr-007,fr,A2,registre,plume,Quelle est la façon la plus polie de demander l'heure ?,"Excusez-moi, auriez-vous l'heure ?|T'as l'heure ?|L'heure !|Il est quelle heure ?","Excusez-moi, auriez-vous l'heure ?",Vouvoiement + conditionnel de politesse.
-fr-008,fr,A2,vocabulaire,nova,Où achète-t-on du pain ?,À la boulangerie|À la pharmacie|À la librairie|À la poste,À la boulangerie,Boulangerie = pain ; librairie = livres.
-fr-009,fr,B1,grammaire,nova,"Si j'avais le temps, je ___ plus.",lirais|lirai|lis|lisais,lirais,Si + imparfait → conditionnel présent.
-fr-010,fr,B1,grammaire,nova,Il faut que tu ___ tes devoirs.,fasses|fais|feras|faisais,fasses,« Il faut que » + subjonctif.
-fr-011,fr,B1,registre,plume,Quelle phrase relève du registre familier ?,J'ai la flemme.|Je manque d'entrain.|Je suis peu motivé.|Je ne le souhaite guère.,J'ai la flemme.,« Avoir la flemme » est familier.
-fr-012,fr,B1,culture,griot,Le 14 juillet commémore notamment…,la prise de la Bastille (1789)|la fin de la Seconde Guerre mondiale|la naissance de Napoléon|l'abolition de l'esclavage,la prise de la Bastille (1789),Fête nationale : prise de la Bastille et Fête de la Fédération (1790).
-fr-013,fr,B2,grammaire,nova,"Bien qu'il ___ fatigué, il a continué.",soit|est|était|sera,soit,« Bien que » + subjonctif.
-fr-014,fr,B2,grammaire,nova,Les lettres que j'ai ___ sont parties.,écrites|écrit|écrits|écrite,écrites,COD placé avant avoir (que = les lettres) → accord féminin pluriel.
-fr-015,fr,B2,registre,plume,Formule de clôture d'une lettre administrative :,"Je vous prie d'agréer, Madame, l'expression de mes salutations distinguées.|Bisous !|À plus.|Ciao, bonne journée.","Je vous prie d'agréer, Madame, l'expression de mes salutations distinguées.",Formule de politesse soutenue standard.
-fr-016,fr,B2,vocabulaire,nova,« Entériner une décision » signifie…,la valider officiellement|l'annuler|la reporter|la critiquer,la valider officiellement,"Entériner = ratifier, rendre valable."
-fr-017,fr,C1,grammaire,nova,"Quoi qu'il ___, nous partirons.",advienne|advient|adviendra|advenait,advienne,« Quoi que » + subjonctif.
-fr-018,fr,C1,grammaire,nova,Elle s'est ___ compte de son erreur.,rendu|rendue|rendus|rendre,rendu,"Dans « se rendre compte », compte est le COD placé après : pas d'accord."
-fr-019,fr,C1,registre,plume,Quel mot appartient au registre soutenu ?,nonobstant|bouquin|boulot|genre,nonobstant,"« Nonobstant » = malgré, langue juridique/soutenue."
-fr-020,fr,C1,culture,griot,Qui a défendu le projet de loi sur l'IVG à l'Assemblée nationale en 1974 ?,Simone Veil|Gisèle Halimi|Simone de Beauvoir|Françoise Giroud,Simone Veil,"Discours de Simone Veil, 26 novembre 1974."
-fr-021,fr,C2,vocabulaire,nova,« Faire long feu » signifie…,"échouer, rater son effet|durer longtemps|se mettre en colère|réussir brillamment","échouer, rater son effet","Piège classique : à l'origine, une charge qui part mal ; donc échouer."
-fr-022,fr,C2,grammaire,nova,Les heures que j'ai ___ dormir…,pu|pues|pus|pue,pu,Participe passé suivi d'un infinitif sous-entendu : invariable.
-fr-023,fr,C2,grammaire,nova,"Passé simple de « naître », 3e personne du singulier :",naquit|naissa|naît|nacquit,naquit,Il naquit.
-fr-024,fr,C2,culture,griot,"« J'accuse…! » (1898), lettre au président de la République, est signée…",Émile Zola|Victor Hugo|Jean Jaurès|Anatole France,Émile Zola,Publiée dans L'Aurore pendant l'affaire Dreyfus.
-fr-025,fr,B1,comprehension,griot,"« Je suis à la bourre, commencez sans moi. » — La personne…",est en retard|est fatiguée|est malade|est déjà arrivée,est en retard,« Être à la bourre » (familier) = être en retard.
-fr-026,fr,B2,comprehension,griot,« La réunion est reportée à vendredi. » — La réunion aura lieu…,"plus tard, vendredi|plus tôt|jamais|lundi","plus tard, vendredi",Reporter = remettre à plus tard.
-es-001,es,A1,grammaire,nova,Yo ___ estudiante.,soy|estoy|es|eres,soy,Identidad/profesión → ser : yo soy.
-es-002,es,A1,vocabulaire,nova,El contrario de « alto » es…,bajo|gordo|largo|viejo,bajo,Alto ≠ bajo.
-es-003,es,A1,grammaire,nova,Nosotros ___ en Madrid.,vivimos|viven|vivís|vivo,vivimos,"Vivir, 1.ª persona del plural : vivimos."
-es-004,es,A1,comprehension,griot,« Ana tiene dos hermanos. » — ¿Cuántos hermanos tiene Ana?,Dos|Uno|Tres|Ninguno,Dos,El texto dice : dos.
-es-005,es,A2,grammaire,nova,Ayer ___ al cine.,fui|voy|iré|iba,fui,Acción puntual pasada → pretérito indefinido : fui.
-es-006,es,A2,grammaire,nova,¿Dónde ___ el museo?,está|es|hay|son,está,Localización de algo concreto → estar.
-es-007,es,A2,registre,plume,¿Cuál es la petición más cortés?,"¿Podría traerme la cuenta, por favor?|¡La cuenta!|Dame la cuenta.|Quiero la cuenta.","¿Podría traerme la cuenta, por favor?",Condicional de cortesía + usted.
-es-008,es,A2,vocabulaire,nova,Lugar donde se compran medicinas :,la farmacia|la panadería|la librería|el mercado,la farmacia,Farmacia = pharmacie.
-es-009,es,B1,grammaire,nova,"Si tengo tiempo, te ___.",llamaré|llamaría|llamara|llamé,llamaré,Si + presente → futuro.
-es-010,es,B1,grammaire,nova,Espero que ___ bien.,estés|estás|estarás|estabas,estés,Esperar que + subjuntivo.
-es-011,es,B1,registre,plume,¿Qué expresión es coloquial (España)?,¡Qué guay!|¡Excelente!|¡Magnífico!|¡Extraordinario!,¡Qué guay!,"« Guay » = génial, registro coloquial."
-es-012,es,B1,culture,griot,El Día de Muertos se celebra sobre todo en…,México|Argentina|España|Chile,México,"Patrimonio cultural inmaterial (UNESCO, 2008)."
-es-013,es,B2,grammaire,nova,"Si hubiera estudiado, ___ aprobado.",habría|había|hubo|haya,habría,Irreal del pasado : pluscuamperfecto de subjuntivo → condicional compuesto.
-es-014,es,B2,grammaire,nova,Busco un piso que ___ terraza.,tenga|tiene|tendrá|tenía,tenga,Antecedente desconocido → subjuntivo.
-es-015,es,B2,registre,plume,Cierre adecuado de un correo formal :,"Atentamente,|¡Chao!|Besos,|Nos vemos,","Atentamente,",« Atentamente » es la fórmula estándar.
-es-016,es,B2,vocabulaire,nova,« Aplazar » significa…,posponer|cancelar|adelantar|anunciar,posponer,Aplazar = reporter.
-es-017,es,C1,grammaire,nova,"Por mucho que ___, no lo convencerás.",insistas|insistes|insistirás|insistías,insistas,« Por mucho que » + subjuntivo (valor concesivo).
-es-018,es,C1,grammaire,nova,"No es que no ___, es que no puedo.",quiera|quiero|querré|quise,quiera,« No es que » + subjuntivo.
-es-019,es,C1,registre,plume,¿Qué palabra pertenece al registro culto?,empero|curro|tío|guay,empero,"« Empero » = sin embargo (culto, literario)."
-es-020,es,C1,culture,griot,¿Quién escribió « Cien años de soledad »?,Gabriel García Márquez|Mario Vargas Llosa|Julio Cortázar|Pablo Neruda,Gabriel García Márquez,Novela publicada en 1967.
-es-021,es,C2,vocabulaire,nova,« Dar gato por liebre » significa…,engañar|regalar un animal|correr deprisa|cocinar mal,engañar,Faire passer une chose de moindre valeur pour une meilleure.
-es-022,es,C2,vocabulaire,nova,« Sea como fuere » expresa…,en cualquier caso|sin duda|por casualidad|al final,en cualquier caso,Locución concesiva culta.
-es-023,es,C2,grammaire,nova,¿Qué forma es futuro de subjuntivo (textos jurídicos)?,infringiere|infrinja|infringía|infringirá,infringiere,El futuro de subjuntivo sobrevive en leyes y refranes.
-es-024,es,C2,culture,griot,¿Quién es el autor de « Don Quijote de la Mancha »?,Miguel de Cervantes|Lope de Vega|Francisco de Quevedo|Calderón de la Barca,Miguel de Cervantes,Publicado en 1605 y 1615.
-es-025,es,B1,comprehension,griot,"« Voy con retraso, empezad sin mí. » — La persona…",llegará tarde|está enferma|no vendrá|ya llegó,llegará tarde,Ir con retraso = llegar tarde.
-es-026,es,B2,comprehension,griot,« La reunión se ha aplazado al viernes. » — La reunión será…,"más tarde, el viernes|antes|nunca|el lunes","más tarde, el viernes",Aplazar = posponer.
-ht-001,ht,A1,grammaire,nova,Mwen ___ Ayiti. (Je viens d'Haïti.),soti|manje|dòmi|bwè,soti,Soti = venir de.
-ht-002,ht,A1,vocabulaire,nova,« Kijan ou rele ? » veut dire…,Comment t'appelles-tu ?|Où habites-tu ?|Quel âge as-tu ?|Comment vas-tu ?,Comment t'appelles-tu ?,Rele = s'appeler.
-ht-003,ht,A1,vocabulaire,nova,« Kòman ou ye ? » veut dire…,Comment vas-tu ?|Comment t'appelles-tu ?|Où vas-tu ?|Que fais-tu ?,Comment vas-tu ?,"Réponse possible : M byen, mèsi."
-ht-004,ht,A1,comprehension,griot,« Jan gen yon chen nwa. » — Ki koulè chen an ?,Nwa|Blan|Wouj|Ble,Nwa,Nwa = noir.
-ht-005,ht,A2,grammaire,nova,Yè mwen ___ ale lekòl. (Hier je suis allé à l'école.),te|ap|pral|fin,te,« Te » marque le passé.
-ht-006,ht,A2,grammaire,nova,Demen mwen ___ travay. (Demain je vais travailler.),pral|te|fin|t ap,pral,"« Pral » (pra, prale) = futur proche."
-ht-007,ht,A2,registre,plume,Quelle demande est la plus polie ?,"Souple, ban m yon ti dlo.|Ban m dlo !|Dlo !|M vle dlo.","Souple, ban m yon ti dlo.",« Souple » = s'il vous plaît ; « yon ti » adoucit.
-ht-008,ht,A2,vocabulaire,nova,« Liv yo » signifie…,les livres|le livre|un livre|mon livre,les livres,« Yo » après le nom marque le pluriel défini.
-ht-009,ht,B1,grammaire,nova,Kounye a m ___ manje. (En ce moment je mange.),ap|te|pral|ta,ap,« Ap » marque le progressif.
-ht-010,ht,B1,grammaire,nova,Choisissez le déterminant correct : « chat ___ » (le chat),la|a|an|nan,la,Après une consonne orale : « la ».
-ht-011,ht,B1,registre,plume,Réponse naturelle et familière à « Sak pase ? »,"N ap boule !|Mèsi madanm.|Bonswa msye.|Wi, souple.",N ap boule !,« Sak pase ? — N ap boule » : salutation familière très courante.
-ht-012,ht,B1,culture,griot,Haïti a proclamé son indépendance le…,1er janvier 1804|14 juillet 1789|4 juillet 1776|18 mai 1803,1er janvier 1804,Première république noire indépendante.
-ht-013,ht,B2,grammaire,nova,"Quel marqueur exprime le conditionnel ? « Si m te gen lajan, m ___ achte yon machin. »",ta|te|ap|pral,ta,« Ta » = conditionnel.
-ht-014,ht,B2,vocabulaire,nova,« Piti piti zwazo fè nich li » signifie…,La patience mène au but|Les oiseaux sont petits|Il faut partir tôt|Chacun chez soi,La patience mène au but,Proverbe : petit à petit l'oiseau fait son nid.
-ht-015,ht,B2,registre,plume,Pour s'adresser poliment à un supérieur :,"Eskize m, mesye, èske m ka pale avè w ?|Ey, vin la !|Gade m non !|Sa w genyen ?","Eskize m, mesye, èske m ka pale avè w ?",« Eskize m » + « mesye/madam » + question en « èske ».
-ht-016,ht,B2,grammaire,nova,Choisissez le déterminant correct : « papa ___ » (le père),a|la|an|nan,a,Après une voyelle orale : « a ».
-ht-017,ht,C1,culture,griot,Le créole haïtien est langue officielle d'Haïti (avec le français) depuis la Constitution de…,1987|1804|1946|2010,1987,Article 5 de la Constitution de 1987.
-ht-018,ht,C1,vocabulaire,nova,« Dèyè mòn gen mòn » signifie…,"Après une difficulté, une autre se présente|Il y a des montagnes partout|Il faut grimper|La vue est belle","Après une difficulté, une autre se présente","Proverbe : derrière les montagnes, il y a des montagnes."
-ht-019,ht,C1,culture,griot,"Dans les contes haïtiens, le personnage rusé face à Bouki est…",Ti Malis|Konpè Lapen|Tonton Nwèl|Zanmi Lou,Ti Malis,Bouki (naïf) et Ti Malis (rusé) sont des figures centrales de l'oralité.
-ht-020,ht,C1,grammaire,nova,Choisissez le déterminant correct : « machin ___ » (la voiture),nan|la|a|an,nan,Après une voyelle nasale finale : « nan ».
-ht-021,ht,C2,vocabulaire,nova,« Pale franse pa di lespri pou sa » signifie…,Parler français ne prouve pas qu'on est intelligent|Il faut parler français|Le français est difficile|L'esprit parle français,Parler français ne prouve pas qu'on est intelligent,Proverbe sur le prestige linguistique.
-ht-022,ht,C2,culture,griot,Un « konbit » est…,un travail collectif solidaire|un plat traditionnel|une danse|un marché,un travail collectif solidaire,"Tradition d'entraide agricole, valeur centrale de la culture haïtienne."
-ht-023,ht,C2,culture,griot,Où l'indépendance d'Haïti a-t-elle été proclamée ?,Aux Gonaïves|À Port-au-Prince|Au Cap-Haïtien|À Jacmel,Aux Gonaïves,"Par Jean-Jacques Dessalines, le 1er janvier 1804."
-ht-024,ht,C2,registre,plume,Quel mot relève d'un créole plus soutenu / écrit ?,Konsènan (concernant)|Ey|Sak pase|Bagay la,Konsènan (concernant),"Dans les textes officiels et la presse, on trouve des connecteurs comme « konsènan »."
-ht-025,ht,B1,comprehension,griot,"« M an reta, kòmanse san mwen. » — La personne…",est en retard|est malade|est déjà là|ne viendra pas,est en retard,An reta = en retard.
-ht-026,ht,B2,comprehension,griot,« Reyinyon an ranvwaye pou vandredi. » — La réunion…,est repoussée à vendredi|est annulée|a lieu aujourd'hui|est avancée,est repoussée à vendredi,"Ranvwaye = repousser, reporter."
+id,lang,level,skill,agent,question,options,answer,explanation,source
+en-001,en,A1,grammaire,nova,She ___ a teacher.,is|are|am|be,is,Le verbe 'to be' à la 3e personne du singulier est 'is'.,
+en-002,en,A1,vocabulaire,nova,What is the opposite of 'cold'?,hot|wet|old|slow,hot,'Hot' (chaud) est le contraire de 'cold' (froid).,
+en-003,en,A1,grammaire,nova,I ___ coffee every morning.,drink|drinks|drinking|drunk,drink,"Présent simple, 1re personne : pas de -s.",
+en-004,en,A1,comprehension,griot,Tom has a dog. The dog is brown. — What colour is the dog?,Brown|Black|White|Grey,Brown,Le texte dit : 'The dog is brown'.,
+en-005,en,A2,grammaire,nova,Yesterday we ___ to the cinema.,went|go|gone|going,went,'Yesterday' → prétérit ; 'go' est irrégulier : went.,
+en-006,en,A2,grammaire,nova,There isn't ___ milk left.,any|some|many|a,any,"Dans une phrase négative, on utilise 'any'.",
+en-007,en,A2,registre,plume,Which request is the most polite?,"Could I have some water, please?|Give me water.|Water now.|I want water.","Could I have some water, please?","'Could I…, please?' est la formule de politesse standard.",
+en-008,en,A2,vocabulaire,nova,A place where you borrow books is a…,library|bookshop|bakery|museum,library,"Faux ami : 'library' = bibliothèque, 'bookshop' = librairie.",
+en-009,en,B1,grammaire,nova,"If it rains tomorrow, we ___ at home.",will stay|would stay|stayed|stay,will stay,Premier conditionnel : if + présent → will + base verbale.,
+en-010,en,B1,grammaire,nova,I've lived here ___ 2019.,since|for|from|during,since,'Since' + point de départ ; 'for' + durée.,
+en-011,en,B1,registre,plume,Which is the most informal way to say 'I am very tired'? (UK),I'm knackered.|I am exhausted.|I feel fatigued.|I am experiencing fatigue.,I'm knackered.,'Knackered' est un mot familier britannique.,
+en-012,en,B1,culture,griot,"In the United States, Thanksgiving is celebrated in…",November|July|December|March,November,Le 4e jeudi de novembre.,
+en-013,en,B2,grammaire,nova,"By the time we arrived, the film ___.",had started|has started|started|was starting,had started,Antériorité dans le passé → past perfect.,
+en-014,en,B2,grammaire,nova,She suggested ___ earlier.,leaving|to leave|leave|we leaving,leaving,'Suggest' + verbe en -ing (ou 'that we leave').,
+en-015,en,B2,registre,plume,Best closing for a formal business email:,"Kind regards,|Cheers mate,|Later!|Love,","Kind regards,",'Kind regards' est neutre et professionnel.,
+en-016,en,B2,vocabulaire,nova,'To postpone' means…,to delay to a later time|to cancel|to bring forward|to announce,to delay to a later time,Postpone = reporter.,
+en-017,en,C1,grammaire,nova,"Not only ___ late, but he also forgot the documents.",did he arrive|he arrived|he did arrive|arrived he,did he arrive,Après 'Not only' en tête de phrase : inversion sujet-auxiliaire.,
+en-018,en,C1,grammaire,nova,Hardly had she sat down ___ the phone rang.,when|than|then|that,when,Structure figée : Hardly… when (No sooner… than).,
+en-019,en,C1,vocabulaire,nova,The report ___ the need for urgent reform.,underscores|undermines|understates|undergoes,underscores,"'Underscore' = souligner, mettre en évidence.",
+en-020,en,C1,culture,griot,The 'I Have a Dream' speech (1963) was delivered by…,Martin Luther King Jr.|John F. Kennedy|Abraham Lincoln|Barack Obama,Martin Luther King Jr.,"Discours prononcé lors de la Marche sur Washington, 28 août 1963.",
+en-021,en,C2,grammaire,nova,"His argument, ___ compelling, failed to persuade the committee.",albeit|despite|however|although of,albeit,'Albeit' (quoique) introduit une concession sans verbe conjugué.,
+en-022,en,C2,vocabulaire,nova,'To pay lip service to something' means…,to express support without acting on it|to speak loudly|to pay a fee|to sing in public,to express support without acting on it,Soutenir en paroles seulement.,
+en-023,en,C2,grammaire,nova,Choose the correct formal subjunctive:,It is essential that he be informed.|It is essential that he will be informed.|It is essential that he being informed.|It is essential that he to be informed.,It is essential that he be informed.,Subjonctif 'mandatif' : base verbale après 'essential that'.,
+en-024,en,C2,culture,griot,'Ask not what your country can do for you…' — which president?,John F. Kennedy|Franklin D. Roosevelt|Ronald Reagan|Bill Clinton,John F. Kennedy,"Discours d'investiture de JFK, 20 janvier 1961.",
+en-025,en,B1,comprehension,griot,"'I'm running late, start without me.' — What does the speaker mean?",They will arrive late|They are jogging|They are not coming|They are early,They will arrive late,'Running late' = être en retard.,
+en-026,en,B2,comprehension,griot,'The meeting has been pushed back to Friday.' — The meeting is now…,"later, on Friday|earlier, on Friday|cancelled|on Monday","later, on Friday",'Push back' = repousser à plus tard.,
+en-027,en,C1,grammaire,nova,Seldom ___ such dedication.,have I seen|I have seen|I saw|did I saw,have I seen,"Adverbe négatif en tête (seldom, rarely) → inversion.",
+en-028,en,C1,grammaire,nova,"Were I in your position, I ___ the offer.",would accept|will accept|accepted|accept,would accept,Inversion conditionnelle formelle (= If I were…).,
+en-029,en,C1,vocabulaire,nova,'To be on the fence' means…,to be undecided|to be in danger|to be outside|to be bored,to be undecided,Ne pas avoir pris parti.,
+en-030,en,C1,registre,plume,Most appropriate wording for a formal report: 'The results ___ that…',"indicate|kinda show|show off|tell us, like,",indicate,"Verbe neutre et précis, sans marques d'oralité.",
+en-031,en,C1,comprehension,griot,'The proposal was shelved.' — The proposal was…,postponed indefinitely|approved|put on display|rewritten,postponed indefinitely,"To shelve = mettre de côté, reporter sine die.",
+en-032,en,C2,vocabulaire,nova,A 'Pyrrhic victory' is…,a victory won at too great a cost|an easy victory|a shared victory|a legal victory,a victory won at too great a cost,Du roi Pyrrhus d'Épire.,
+en-033,en,C2,vocabulaire,nova,'Notwithstanding' is closest in meaning to…,despite|because of|in addition to|instead of,despite,Registre juridique / soutenu.,
+en-034,en,C2,culture,griot,'We shall fight on the beaches' (1940) was delivered by…,Winston Churchill|Neville Chamberlain|Franklin D. Roosevelt|Clement Attlee,Winston Churchill,"Discours à la Chambre des communes, 4 juin 1940.",
+en-035,en,C2,registre,plume,Which sentence suits a legal contract?,"The Supplier shall deliver the goods within thirty (30) days.|The Supplier's gonna deliver in a month.|Supplier will try to deliver soon.|Goods coming in 30 days, hopefully.",The Supplier shall deliver the goods within thirty (30) days.,"« shall » d'obligation, termes définis, chiffres en lettres.",
+en-036,en,C2,comprehension,griot,'Her remarks were nothing if not candid.' — Her remarks were…,extremely frank|not frank at all|rude|unclear,extremely frank,« nothing if not » = extrêmement.,
+fr-001,fr,A1,grammaire,nova,Je ___ étudiante.,suis|es|est|sommes,suis,"Être, 1re personne du singulier : je suis.",
+fr-002,fr,A1,vocabulaire,nova,Le contraire de « grand » est…,petit|gros|long|haut,petit,Grand ≠ petit.,
+fr-003,fr,A1,grammaire,nova,Nous ___ du pain.,mangeons|mangez|mange|mangent,mangeons,Verbes en -ger : nous mangeons (le e garde le son [ʒ]).,
+fr-004,fr,A1,comprehension,griot,« Marie habite à Lyon avec son chat. » — Où habite Marie ?,À Lyon|À Paris|À Marseille|À Lille,À Lyon,Le texte dit : à Lyon.,
+fr-005,fr,A2,grammaire,nova,"Hier, je ___ au marché.",suis allé(e)|vais|irai|allais,suis allé(e),Action ponctuelle passée → passé composé avec être.,
+fr-006,fr,A2,grammaire,nova,Je parle à Paul. → Je ___ parle.,lui|le|leur|y,lui,Parler À quelqu'un → COI singulier : lui.,
+fr-007,fr,A2,registre,plume,Quelle est la façon la plus polie de demander l'heure ?,"Excusez-moi, auriez-vous l'heure ?|T'as l'heure ?|L'heure !|Il est quelle heure ?","Excusez-moi, auriez-vous l'heure ?",Vouvoiement + conditionnel de politesse.,
+fr-008,fr,A2,vocabulaire,nova,Où achète-t-on du pain ?,À la boulangerie|À la pharmacie|À la librairie|À la poste,À la boulangerie,Boulangerie = pain ; librairie = livres.,
+fr-009,fr,B1,grammaire,nova,"Si j'avais le temps, je ___ plus.",lirais|lirai|lis|lisais,lirais,Si + imparfait → conditionnel présent.,
+fr-010,fr,B1,grammaire,nova,Il faut que tu ___ tes devoirs.,fasses|fais|feras|faisais,fasses,« Il faut que » + subjonctif.,
+fr-011,fr,B1,registre,plume,Quelle phrase relève du registre familier ?,J'ai la flemme.|Je manque d'entrain.|Je suis peu motivé.|Je ne le souhaite guère.,J'ai la flemme.,« Avoir la flemme » est familier.,
+fr-012,fr,B1,culture,griot,Le 14 juillet commémore notamment…,la prise de la Bastille (1789)|la fin de la Seconde Guerre mondiale|la naissance de Napoléon|l'abolition de l'esclavage,la prise de la Bastille (1789),Fête nationale : prise de la Bastille et Fête de la Fédération (1790).,
+fr-013,fr,B2,grammaire,nova,"Bien qu'il ___ fatigué, il a continué.",soit|est|était|sera,soit,« Bien que » + subjonctif.,
+fr-014,fr,B2,grammaire,nova,Les lettres que j'ai ___ sont parties.,écrites|écrit|écrits|écrite,écrites,COD placé avant avoir (que = les lettres) → accord féminin pluriel.,
+fr-015,fr,B2,registre,plume,Formule de clôture d'une lettre administrative :,"Je vous prie d'agréer, Madame, l'expression de mes salutations distinguées.|Bisous !|À plus.|Ciao, bonne journée.","Je vous prie d'agréer, Madame, l'expression de mes salutations distinguées.",Formule de politesse soutenue standard.,
+fr-016,fr,B2,vocabulaire,nova,« Entériner une décision » signifie…,la valider officiellement|l'annuler|la reporter|la critiquer,la valider officiellement,"Entériner = ratifier, rendre valable.",
+fr-017,fr,C1,grammaire,nova,"Quoi qu'il ___, nous partirons.",advienne|advient|adviendra|advenait,advienne,« Quoi que » + subjonctif.,
+fr-018,fr,C1,grammaire,nova,Elle s'est ___ compte de son erreur.,rendu|rendue|rendus|rendre,rendu,"Dans « se rendre compte », compte est le COD placé après : pas d'accord.",
+fr-019,fr,C1,registre,plume,Quel mot appartient au registre soutenu ?,nonobstant|bouquin|boulot|genre,nonobstant,"« Nonobstant » = malgré, langue juridique/soutenue.",
+fr-020,fr,C1,culture,griot,Qui a défendu le projet de loi sur l'IVG à l'Assemblée nationale en 1974 ?,Simone Veil|Gisèle Halimi|Simone de Beauvoir|Françoise Giroud,Simone Veil,"Discours de Simone Veil, 26 novembre 1974.",
+fr-021,fr,C2,vocabulaire,nova,« Faire long feu » signifie…,"échouer, rater son effet|durer longtemps|se mettre en colère|réussir brillamment","échouer, rater son effet","Piège classique : à l'origine, une charge qui part mal ; donc échouer.",
+fr-022,fr,C2,grammaire,nova,Les heures que j'ai ___ dormir…,pu|pues|pus|pue,pu,Participe passé suivi d'un infinitif sous-entendu : invariable.,
+fr-023,fr,C2,grammaire,nova,"Passé simple de « naître », 3e personne du singulier :",naquit|naissa|naît|nacquit,naquit,Il naquit.,
+fr-024,fr,C2,culture,griot,"« J'accuse…! » (1898), lettre au président de la République, est signée…",Émile Zola|Victor Hugo|Jean Jaurès|Anatole France,Émile Zola,Publiée dans L'Aurore pendant l'affaire Dreyfus.,
+fr-025,fr,B1,comprehension,griot,"« Je suis à la bourre, commencez sans moi. » — La personne…",est en retard|est fatiguée|est malade|est déjà arrivée,est en retard,« Être à la bourre » (familier) = être en retard.,
+fr-026,fr,B2,comprehension,griot,« La réunion est reportée à vendredi. » — La réunion aura lieu…,"plus tard, vendredi|plus tôt|jamais|lundi","plus tard, vendredi",Reporter = remettre à plus tard.,
+fr-027,fr,C1,grammaire,nova,Je doute qu'il ___ raison.,ait|a|aura|avait,ait,Douter que + subjonctif.,
+fr-028,fr,C1,vocabulaire,nova,« Être aux abois » signifie…,être dans une situation désespérée|aboyer|être très heureux|être en avance,être dans une situation désespérée,Image du cerf encerclé par la meute.,
+fr-029,fr,C1,registre,plume,Formule adaptée pour solliciter un entretien :,Je me permets de solliciter un entretien afin de vous présenter ma candidature.|J'veux vous voir vite fait.|Faut qu'on cause.|Donnez-moi un rendez-vous.,Je me permets de solliciter un entretien afin de vous présenter ma candidature.,Registre professionnel : formule de politesse + objet clair.,
+fr-030,fr,C1,comprehension,griot,« La mesure a été entérinée sans coup férir. » — Elle a été…,validée sans difficulté|rejetée violemment|reportée|contestée,validée sans difficulté,Sans coup férir = sans rencontrer de résistance.,
+fr-031,fr,C2,grammaire,nova,« Il eût fallu qu'il vînt. » — « vînt » est au…,subjonctif imparfait|passé simple|conditionnel passé|plus-que-parfait de l'indicatif,subjonctif imparfait,Concordance des temps littéraire.,
+fr-032,fr,C2,grammaire,nova,« Elles se sont ___ des cadeaux. »,offert|offertes|offerts|offerte,offert,Le COD (des cadeaux) est placé après : pas d'accord ; « se » est COI.,
+fr-033,fr,C2,vocabulaire,nova,« Sabler le champagne » signifie…,boire du champagne pour fêter un événement|le refroidir dans le sable|le jeter|le servir mal,boire du champagne pour fêter un événement,Expression figée et festive.,
+fr-034,fr,C2,culture,griot,Qui a écrit « Cahier d'un retour au pays natal » ?,Aimé Césaire|Léopold Sédar Senghor|Frantz Fanon|Édouard Glissant,Aimé Césaire,Œuvre fondatrice de la Négritude (1939).,
+fr-035,fr,C2,registre,plume,« Nonobstant les dispositions qui précèdent » relève du registre…,juridique / soutenu|familier|argotique|oral courant,juridique / soutenu,Lexique des contrats et textes officiels.,
+fr-036,fr,C2,comprehension,griot,"« Son discours, pour brillant qu'il fût, ne convainquit personne. » — Le discours était…",brillant mais peu convaincant|terne et convaincant|brillant et convaincant|inexistant,brillant mais peu convaincant,« pour + adj. + que » = concession (bien que).,
+es-001,es,A1,grammaire,nova,Yo ___ estudiante.,soy|estoy|es|eres,soy,Identidad/profesión → ser : yo soy.,
+es-002,es,A1,vocabulaire,nova,El contrario de « alto » es…,bajo|gordo|largo|viejo,bajo,Alto ≠ bajo.,
+es-003,es,A1,grammaire,nova,Nosotros ___ en Madrid.,vivimos|viven|vivís|vivo,vivimos,"Vivir, 1.ª persona del plural : vivimos.",
+es-004,es,A1,comprehension,griot,« Ana tiene dos hermanos. » — ¿Cuántos hermanos tiene Ana?,Dos|Uno|Tres|Ninguno,Dos,El texto dice : dos.,
+es-005,es,A2,grammaire,nova,Ayer ___ al cine.,fui|voy|iré|iba,fui,Acción puntual pasada → pretérito indefinido : fui.,
+es-006,es,A2,grammaire,nova,¿Dónde ___ el museo?,está|es|hay|son,está,Localización de algo concreto → estar.,
+es-007,es,A2,registre,plume,¿Cuál es la petición más cortés?,"¿Podría traerme la cuenta, por favor?|¡La cuenta!|Dame la cuenta.|Quiero la cuenta.","¿Podría traerme la cuenta, por favor?",Condicional de cortesía + usted.,
+es-008,es,A2,vocabulaire,nova,Lugar donde se compran medicinas :,la farmacia|la panadería|la librería|el mercado,la farmacia,Farmacia = pharmacie.,
+es-009,es,B1,grammaire,nova,"Si tengo tiempo, te ___.",llamaré|llamaría|llamara|llamé,llamaré,Si + presente → futuro.,
+es-010,es,B1,grammaire,nova,Espero que ___ bien.,estés|estás|estarás|estabas,estés,Esperar que + subjuntivo.,
+es-011,es,B1,registre,plume,¿Qué expresión es coloquial (España)?,¡Qué guay!|¡Excelente!|¡Magnífico!|¡Extraordinario!,¡Qué guay!,"« Guay » = génial, registro coloquial.",
+es-012,es,B1,culture,griot,El Día de Muertos se celebra sobre todo en…,México|Argentina|España|Chile,México,"Patrimonio cultural inmaterial (UNESCO, 2008).",
+es-013,es,B2,grammaire,nova,"Si hubiera estudiado, ___ aprobado.",habría|había|hubo|haya,habría,Irreal del pasado : pluscuamperfecto de subjuntivo → condicional compuesto.,
+es-014,es,B2,grammaire,nova,Busco un piso que ___ terraza.,tenga|tiene|tendrá|tenía,tenga,Antecedente desconocido → subjuntivo.,
+es-015,es,B2,registre,plume,Cierre adecuado de un correo formal :,"Atentamente,|¡Chao!|Besos,|Nos vemos,","Atentamente,",« Atentamente » es la fórmula estándar.,
+es-016,es,B2,vocabulaire,nova,« Aplazar » significa…,posponer|cancelar|adelantar|anunciar,posponer,Aplazar = reporter.,
+es-017,es,C1,grammaire,nova,"Por mucho que ___, no lo convencerás.",insistas|insistes|insistirás|insistías,insistas,« Por mucho que » + subjuntivo (valor concesivo).,
+es-018,es,C1,grammaire,nova,"No es que no ___, es que no puedo.",quiera|quiero|querré|quise,quiera,« No es que » + subjuntivo.,
+es-019,es,C1,registre,plume,¿Qué palabra pertenece al registro culto?,empero|curro|tío|guay,empero,"« Empero » = sin embargo (culto, literario).",
+es-020,es,C1,culture,griot,¿Quién escribió « Cien años de soledad »?,Gabriel García Márquez|Mario Vargas Llosa|Julio Cortázar|Pablo Neruda,Gabriel García Márquez,Novela publicada en 1967.,
+es-021,es,C2,vocabulaire,nova,« Dar gato por liebre » significa…,engañar|regalar un animal|correr deprisa|cocinar mal,engañar,Faire passer une chose de moindre valeur pour une meilleure.,
+es-022,es,C2,vocabulaire,nova,« Sea como fuere » expresa…,en cualquier caso|sin duda|por casualidad|al final,en cualquier caso,Locución concesiva culta.,
+es-023,es,C2,grammaire,nova,¿Qué forma es futuro de subjuntivo (textos jurídicos)?,infringiere|infrinja|infringía|infringirá,infringiere,El futuro de subjuntivo sobrevive en leyes y refranes.,
+es-024,es,C2,culture,griot,¿Quién es el autor de « Don Quijote de la Mancha »?,Miguel de Cervantes|Lope de Vega|Francisco de Quevedo|Calderón de la Barca,Miguel de Cervantes,Publicado en 1605 y 1615.,
+es-025,es,B1,comprehension,griot,"« Voy con retraso, empezad sin mí. » — La persona…",llegará tarde|está enferma|no vendrá|ya llegó,llegará tarde,Ir con retraso = llegar tarde.,
+es-026,es,B2,comprehension,griot,« La reunión se ha aplazado al viernes. » — La reunión será…,"más tarde, el viernes|antes|nunca|el lunes","más tarde, el viernes",Aplazar = posponer.,
+es-027,es,C1,grammaire,nova,Ojalá ___ venido ayer.,hubieras|habías|has|habrías,hubieras,Deseo irrealizable en el pasado → pluscuamperfecto de subjuntivo.,
+es-028,es,C1,vocabulaire,nova,« Estar en la luna de Valencia » significa…,estar distraído|estar enamorado|viajar mucho|estar triste,estar distraído,Équivalent de « être dans la lune ».,
+es-029,es,C1,registre,plume,Fórmula adecuada para una petición formal :,"Le agradecería que me enviara la documentación.|Mándame los papeles, porfa.|Pásame eso.|Quiero los papeles ya.",Le agradecería que me enviara la documentación.,Condicional de cortesía + usted + subjuntivo.,
+es-030,es,C1,comprehension,griot,« El proyecto quedó en agua de borrajas. » — El proyecto…,no llegó a nada|fue un éxito|se aprobó|se mojó,no llegó a nada,Quedar en agua de borrajas = tourner court.,
+es-031,es,C2,vocabulaire,nova,« Erre que erre » significa…,con obstinación|por error|rápidamente|en voz baja,con obstinación,"S'obstiner, ne pas en démordre.",
+es-032,es,C2,grammaire,nova,"« De haberlo sabido, no habría venido » equivale a…","Si lo hubiera sabido, no habría venido.|Como lo sabía, no vine.|Aunque lo sabía, vine.|Cuando lo supe, vine.","Si lo hubiera sabido, no habría venido.",« De + infinitivo compuesto » = condición irreal del pasado.,
+es-033,es,C2,culture,griot,¿Quién escribió « Pedro Páramo »?,Juan Rulfo|Carlos Fuentes|Octavio Paz|Jorge Luis Borges,Juan Rulfo,Novela mexicana de 1955.,
+es-034,es,C2,registre,plume,« Por la presente se hace constar que… » pertenece al registro…,administrativo / jurídico|coloquial|juvenil|poético,administrativo / jurídico,Fórmula de certificados y documentos oficiales.,
+es-035,es,C2,comprehension,griot,« No es oro todo lo que reluce. » — Significa…,las apariencias engañan|el oro es caro|todo brilla|hay que buscar oro,las apariencias engañan,Proverbe : tout ce qui brille n'est pas or.,
+ht-001,ht,A1,grammaire,nova,Mwen ___ Ayiti. (Je viens d'Haïti.),soti|manje|dòmi|bwè,soti,Soti = venir de.,
+ht-002,ht,A1,vocabulaire,nova,« Kijan ou rele ? » veut dire…,Comment t'appelles-tu ?|Où habites-tu ?|Quel âge as-tu ?|Comment vas-tu ?,Comment t'appelles-tu ?,Rele = s'appeler.,
+ht-003,ht,A1,vocabulaire,nova,« Kòman ou ye ? » veut dire…,Comment vas-tu ?|Comment t'appelles-tu ?|Où vas-tu ?|Que fais-tu ?,Comment vas-tu ?,"Réponse possible : M byen, mèsi.",
+ht-004,ht,A1,comprehension,griot,« Jan gen yon chen nwa. » — Ki koulè chen an ?,Nwa|Blan|Wouj|Ble,Nwa,Nwa = noir.,
+ht-005,ht,A2,grammaire,nova,Yè mwen ___ ale lekòl. (Hier je suis allé à l'école.),te|ap|pral|fin,te,« Te » marque le passé.,
+ht-006,ht,A2,grammaire,nova,Demen mwen ___ travay. (Demain je vais travailler.),pral|te|fin|t ap,pral,"« Pral » (pra, prale) = futur proche.",
+ht-007,ht,A2,registre,plume,Quelle demande est la plus polie ?,"Souple, ban m yon ti dlo.|Ban m dlo !|Dlo !|M vle dlo.","Souple, ban m yon ti dlo.",« Souple » = s'il vous plaît ; « yon ti » adoucit.,
+ht-008,ht,A2,vocabulaire,nova,« Liv yo » signifie…,les livres|le livre|un livre|mon livre,les livres,« Yo » après le nom marque le pluriel défini.,
+ht-009,ht,B1,grammaire,nova,Kounye a m ___ manje. (En ce moment je mange.),ap|te|pral|ta,ap,« Ap » marque le progressif.,
+ht-010,ht,B1,grammaire,nova,Choisissez le déterminant correct : « chat ___ » (le chat),la|a|an|nan,la,Après une consonne orale : « la ».,
+ht-011,ht,B1,registre,plume,Réponse naturelle et familière à « Sak pase ? »,"N ap boule !|Mèsi madanm.|Bonswa msye.|Wi, souple.",N ap boule !,« Sak pase ? — N ap boule » : salutation familière très courante.,
+ht-012,ht,B1,culture,griot,Haïti a proclamé son indépendance le…,1er janvier 1804|14 juillet 1789|4 juillet 1776|18 mai 1803,1er janvier 1804,Première république noire indépendante.,
+ht-013,ht,B2,grammaire,nova,"Quel marqueur exprime le conditionnel ? « Si m te gen lajan, m ___ achte yon machin. »",ta|te|ap|pral,ta,« Ta » = conditionnel.,
+ht-014,ht,B2,vocabulaire,nova,« Piti piti zwazo fè nich li » signifie…,La patience mène au but|Les oiseaux sont petits|Il faut partir tôt|Chacun chez soi,La patience mène au but,Proverbe : petit à petit l'oiseau fait son nid.,
+ht-015,ht,B2,registre,plume,Pour s'adresser poliment à un supérieur :,"Eskize m, mesye, èske m ka pale avè w ?|Ey, vin la !|Gade m non !|Sa w genyen ?","Eskize m, mesye, èske m ka pale avè w ?",« Eskize m » + « mesye/madam » + question en « èske ».,
+ht-016,ht,B2,grammaire,nova,Choisissez le déterminant correct : « papa ___ » (le père),a|la|an|nan,a,Après une voyelle orale : « a ».,
+ht-017,ht,C1,culture,griot,Le créole haïtien est langue officielle d'Haïti (avec le français) depuis la Constitution de…,1987|1804|1946|2010,1987,Article 5 de la Constitution de 1987.,
+ht-018,ht,C1,vocabulaire,nova,« Dèyè mòn gen mòn » signifie…,"Après une difficulté, une autre se présente|Il y a des montagnes partout|Il faut grimper|La vue est belle","Après une difficulté, une autre se présente","Proverbe : derrière les montagnes, il y a des montagnes.",
+ht-019,ht,C1,culture,griot,"Dans les contes haïtiens, le personnage rusé face à Bouki est…",Ti Malis|Konpè Lapen|Tonton Nwèl|Zanmi Lou,Ti Malis,Bouki (naïf) et Ti Malis (rusé) sont des figures centrales de l'oralité.,
+ht-020,ht,C1,grammaire,nova,Choisissez le déterminant correct : « machin ___ » (la voiture),nan|la|a|an,nan,Après une voyelle nasale finale : « nan ».,
+ht-021,ht,C2,vocabulaire,nova,« Pale franse pa di lespri pou sa » signifie…,Parler français ne prouve pas qu'on est intelligent|Il faut parler français|Le français est difficile|L'esprit parle français,Parler français ne prouve pas qu'on est intelligent,Proverbe sur le prestige linguistique.,
+ht-022,ht,C2,culture,griot,Un « konbit » est…,un travail collectif solidaire|un plat traditionnel|une danse|un marché,un travail collectif solidaire,"Tradition d'entraide agricole, valeur centrale de la culture haïtienne.",
+ht-023,ht,C2,culture,griot,Où l'indépendance d'Haïti a-t-elle été proclamée ?,Aux Gonaïves|À Port-au-Prince|Au Cap-Haïtien|À Jacmel,Aux Gonaïves,"Par Jean-Jacques Dessalines, le 1er janvier 1804.",
+ht-024,ht,C2,registre,plume,Quel mot relève d'un créole plus soutenu / écrit ?,Konsènan (concernant)|Ey|Sak pase|Bagay la,Konsènan (concernant),"Dans les textes officiels et la presse, on trouve des connecteurs comme « konsènan ».",
+ht-025,ht,B1,comprehension,griot,"« M an reta, kòmanse san mwen. » — La personne…",est en retard|est malade|est déjà là|ne viendra pas,est en retard,An reta = en retard.,
+ht-026,ht,B2,comprehension,griot,« Reyinyon an ranvwaye pou vandredi. » — La réunion…,est repoussée à vendredi|est annulée|a lieu aujourd'hui|est avancée,est repoussée à vendredi,"Ranvwaye = repousser, reporter.",
+ht-027,ht,A1,vocabulaire,nova,« Mèsi » veut dire…,merci|bonjour|au revoir|pardon,merci,Mèsi = merci ; « mèsi anpil » = merci beaucoup.,
+ht-028,ht,A1,vocabulaire,nova,"Comment dit-on « personne, gens » en kreyòl ?",moun|zanmi|kay|liv,moun,"« moun » s'écrit avec le trigramme « oun », l'un des 32 graphèmes officiels.",Òtograf ofisyèl 1980 / AKA
+ht-029,ht,A1,grammaire,nova,Comment dit-on « Il est malade » ?,Li malad.|Li se malad.|Li ye malad.|Li te se malad.,Li malad.,"Devant un adjectif, pas de copule : « Li malad ». « Se » s'emploie devant un nom (« Li se doktè »).",
+ht-030,ht,A1,comprehension,griot,« Kote w rete ? » veut dire…,Où habites-tu ?|Quand pars-tu ?|Comment vas-tu ?|Qui es-tu ?,Où habites-tu ?,"Rete = habiter, rester ; « w » est la forme courte de « ou ».",
+ht-031,ht,A2,grammaire,nova,Comment dit-on « Je ne sais pas » ?,M pa konnen.|M konnen pa.|Pa m konnen.|M pa t konnen.,M pa konnen.,« pa » se place avant le verbe. « M pa t konnen » = je ne savais pas.,
+ht-032,ht,A2,grammaire,nova,Pluriel de « liv la » (le livre) :,liv yo|liv las|yo liv|liv lan yo,liv yo,Le déterminant pluriel « yo » remplace « la » après le nom.,
+ht-033,ht,A2,vocabulaire,nova,Le nombre 8 s'écrit…,uit|wit|huit|ouit,uit,"Le graphème « ui » fait partie des 8 voyelles orales officielles (a, e, è, i, o, ò, ou, ui).",Òtograf ofisyèl 1980 / AKA
+ht-034,ht,A2,registre,plume,Salutation polie de l'après-midi ou du soir :,"Bonswa, madam.|Sak pase, chè ?|Ey !|N ap boule.","Bonswa, madam.",« Bonswa » s'utilise dès le début de l'après-midi ; « madam / mesye » marquent le respect.,
+ht-035,ht,A2,culture,griot,Quel plat est servi le 1er janvier pour célébrer l'indépendance ?,Soup joumou|Diri ak pwa|Griyo|Akra,Soup joumou,"La soup joumou, symbole de liberté, est inscrite au patrimoine immatériel de l'UNESCO (2021).",
+ht-036,ht,B1,grammaire,nova,« Mwen konn manje mango » exprime…,une habitude|un futur|une action en cours|une obligation,une habitude,« konn » (konnen) devant un verbe = aspect habituel : j'ai l'habitude de manger des mangues.,
+ht-037,ht,B1,grammaire,nova,« M sot manje » signifie…,Je viens de manger|Je vais manger|Je suis en train de manger|Je mangerais,Je viens de manger,« sot » (soti) = passé récent.,
+ht-038,ht,B1,grammaire,nova,Déterminant correct : « chen ___ » (le chien),an|la|a|nan,an,Après une voyelle nasale finale (« en ») : « an ».,
+ht-039,ht,B1,grammaire,nova,Déterminant correct : « fanm ___ » (la femme),nan|la|a|an,nan,"Après une consonne nasale (m, n) : « nan ».",
+ht-040,ht,B1,vocabulaire,nova,Combien de graphèmes compte l'alphabet officiel du kreyòl ayisyen ?,32|26|24|40,32,"12 voyelles, 18 consonnes et 2 semi-voyelles (w, y) : 32 graphèmes.",Òtograf ofisyèl 1980 / AKA
+ht-041,ht,B1,comprehension,griot,"« Pa gen pwoblèm, m ap vini demen. » — La personne…",viendra demain|est venue hier|ne viendra pas|a un problème,viendra demain,« ap » + demen = futur ; « pa gen pwoblèm » = pas de problème.,
+ht-042,ht,B1,registre,plume,Pour demander poliment son chemin à un inconnu :,"Eskize m, èske w ka di m kote lopital la ye ?|Ey, kote lopital la ?|Lopital la, kote ?|Di m kote lopital la !","Eskize m, èske w ka di m kote lopital la ye ?",« Eskize m » + question en « èske » = formule polie.,
+ht-043,ht,B2,grammaire,nova,"« Si m te konnen, m t ap vini. » exprime…",un irréel du passé (je serais venu)|un futur certain|une habitude|un ordre,un irréel du passé (je serais venu),« te » dans la subordonnée + « t ap » dans la principale = conditionnel passé.,
+ht-044,ht,B2,grammaire,nova,Négation correcte de « M te ale » (j'étais allé) :,M pa t ale.|M te pa ale.|Pa m te ale.|M ale pa.,M pa t ale.,« pa » précède toujours les marqueurs (te → t).,
+ht-045,ht,B2,grammaire,nova,Quelle graphie est conforme à l'orthographe officielle ?,lekòl|lécol|lekol|lecòl,lekòl,Pas de « é » ni de « c » dans l'alphabet ; « ò » note le o ouvert.,Òtograf ofisyèl 1980 / AKA
+ht-046,ht,B2,grammaire,nova,Pourquoi écrit-on « pèn » (peine) avec un accent grave ?,"Pour le distinguer de « pen » (pain), où « en » est une voyelle nasale|Par tradition française|Pour marquer l'accent tonique|C'est facultatif","Pour le distinguer de « pen » (pain), où « en » est une voyelle nasale","Sans accent, « en » est une nasale ; « èn » se lit è + n. Un graphème = un son.",Òtograf ofisyèl 1980 / AKA
+ht-047,ht,B2,vocabulaire,nova,« Tèt ansanm » signifie…,"solidarité, union|mal de tête|réunion de famille|fête nationale","solidarité, union",Littéralement « têtes ensemble » : l'union qui fait la force.,
+ht-048,ht,B2,culture,griot,Quel article de la Constitution de 1987 prévoit la création d'une Académie du créole ?,Article 213|Article 5|Article 1|Article 24,Article 213,L'article 213 annonce l'Académie ; l'article 5 fait du kreyòl la langue commune et officielle.,Konstitisyon 1987
+ht-049,ht,B2,comprehension,griot,"« Malgre lapli a, yo kontinye travay. » — Que s'est-il passé ?",Ils ont continué à travailler malgré la pluie|Ils ont arrêté à cause de la pluie|Il n'a pas plu|Ils ont travaillé au soleil,Ils ont continué à travailler malgré la pluie,Malgre = malgré ; kontinye = continuer.,
+ht-050,ht,B2,registre,plume,Formule de clôture adaptée à un courriel professionnel en kreyòl :,"Mèsi davans, ak tout respè m.|N a wè, monchè !|Ciao !|Bon, m ale.","Mèsi davans, ak tout respè m.",« Mèsi davans » (merci d'avance) et « respè » relèvent du registre professionnel.,
+ht-051,ht,C1,culture,griot,La loi portant création de l'Akademi Kreyòl Ayisyen date de…,2014|1987|1979|2017,2014,Loi du 7 avril 2014 ; l'Académie est installée en décembre 2014.,Akademi Kreyòl Ayisyen
+ht-052,ht,C1,culture,griot,"Selon la loi, l'AKA compte…",entre 33 et 55 akademisyen|exactement 12 membres|entre 100 et 200 membres|un membre par département,entre 33 et 55 akademisyen,"Article 21 de la loi : 33 à 55 membres, titre honorifique et non rémunéré.",Akademi Kreyòl Ayisyen
+ht-053,ht,C1,culture,griot,Laquelle est une mission de l'AKA fixée par la loi ?,Garantir les droits linguistiques des Haïtiens et établir des normes pour le kreyòl|Remplacer le français dans la Caraïbe|Gérer les écoles privées|Organiser les élections,Garantir les droits linguistiques des Haïtiens et établir des normes pour le kreyòl,Elle est la référence du kreyòl oral et écrit et émet des recommandations orthographiques.,Akademi Kreyòl Ayisyen
+ht-054,ht,C1,culture,griot,"En juin 2017, l'AKA a publié…",sa première résolution sur l'orthographe du kreyòl|la première Constitution en kreyòl|un dictionnaire anglais-kreyòl|une loi sur l'éducation,sa première résolution sur l'orthographe du kreyòl,« Premye rezolisyon sou òtograf kreyòl ayisyen an » ; une deuxième résolution a suivi en 2023.,Akademi Kreyòl Ayisyen
+ht-055,ht,C1,grammaire,nova,« Se manje li manje. » (clivage du prédicat) met l'accent sur…,l'action elle-même : il a bel et bien mangé / il n'a fait que manger|le sujet|le lieu|le futur,l'action elle-même : il a bel et bien mangé / il n'a fait que manger,La reprise du verbe après « se » focalise le procès — trait typique de la syntaxe du kreyòl.,
+ht-056,ht,C1,grammaire,nova,« Se Mari ki te rele w. » signifie…,C'est Marie qui t'a appelé.|Marie t'appellera.|Marie s'appelle comme toi.|Appelle Marie.,C'est Marie qui t'a appelé.,Mise en relief « se … ki » + passé « te ».,
+ht-057,ht,C1,grammaire,nova,Graphie standard de « je suis en train de manger » :,M ap manje.|M'ap manjé.|Map manger.|Mwen apé manjé.,M ap manje.,Le « é » n'existe pas dans l'alphabet officiel ; le pronom court « m » s'écrit séparé du marqueur « ap ».,Òtograf ofisyèl 1980 / AKA
+ht-058,ht,C1,vocabulaire,nova,« Pàn » (avec accent grave) signifie…,panne|paon|pain|peine,panne,"« àn » se lit a + n (pàn = panne), tandis que « an » est nasal (pan = paon).",Òtograf ofisyèl 1980 / AKA
+ht-059,ht,C1,comprehension,griot,"« Lang kreyòl la se yon zouti tout Ayisyen pataje ; se poutèt sa, administrasyon piblik la dwe kominike ak pèp la nan lang li konprann nan. » — Idée principale :","L'administration doit communiquer avec la population en kreyòl, langue commune|Le kreyòl est une langue étrangère|L'administration doit utiliser l'anglais|La population ne comprend pas le kreyòl","L'administration doit communiquer avec la population en kreyòl, langue commune",Se poutèt sa = c'est pourquoi ; dwe = devoir. Idée conforme à la mission de l'AKA.,
+ht-060,ht,C2,culture,griot,Premier roman écrit entièrement en kreyòl ayisyen (1975) :,"Dezafi, de Frankétienne|Gouverneurs de la rosée, de Jacques Roumain|Compère Général Soleil, de J. S. Alexis|Choucoune, d'Oswald Durand","Dezafi, de Frankétienne",Dezafi (1975) ; les autres œuvres citées sont en français (Choucoune est un poème).,
+ht-061,ht,C2,culture,griot,Félix Morisseau-Leroy est célèbre pour son adaptation en kreyòl de…,Antigòn (Antigone de Sophocle)|Hamlet|Le Cid|Don Quichotte,Antigòn (Antigone de Sophocle),"Antigòn (1953), jalon du théâtre en kreyòl.",
+ht-062,ht,C2,grammaire,nova,"Selon les principes de l'orthographe officielle, quelle affirmation est vraie ?",Chaque graphème se prononce toujours de la même façon et aucune lettre n'est muette|Certaines lettres finales sont muettes comme en français|On écrit selon l'étymologie française|Le « h » est toujours muet,Chaque graphème se prononce toujours de la même façon et aucune lettre n'est muette,"Trois principes : un son = une graphie, une graphie = un son, pas de lettre muette.",Òtograf ofisyèl 1980 / AKA
+ht-063,ht,C2,vocabulaire,nova,Quel mot contient le trigramme « oun » ?,moun|mouton|mont|boul,moun,"« oun » (moun, youn) est l'un des deux graphèmes à plusieurs lettres avec « ng ».",Òtograf ofisyèl 1980 / AKA
+ht-064,ht,C2,grammaire,nova,« Li bèl bèl » (redoublement de l'adjectif) signifie…,Elle est vraiment très belle|Elle est deux fois belle|Elle était belle|Elle sera belle,Elle est vraiment très belle,Le redoublement exprime l'intensité.,
+ht-065,ht,C2,registre,plume,Quel connecteur appartient au kreyòl écrit argumentatif ?,Sepandan|Ey|Monchè|Anfòm,Sepandan,"Sepandan = cependant ; s'emploie dans la presse, les essais et les textes officiels.",
+ht-066,ht,C2,comprehension,griot,"Proverbe « Bourik travay, chwal galonnen » : sens ?","Les uns travaillent, d'autres en récoltent les honneurs|Le cheval travaille plus que l'âne|Il faut soigner ses animaux|Le travail paie toujours","Les uns travaillent, d'autres en récoltent les honneurs","Littéralement : l'âne travaille, le cheval porte les galons.",

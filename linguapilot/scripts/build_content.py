@@ -137,15 +137,106 @@ Q = {
 ],
 }
 
+# --------------------------------------------------------------------------
+# 1 bis. ENRICHISSEMENT — priorité au créole haïtien et aux niveaux C1-C2
+#   6e champ = source / référentiel. Pour le kreyòl, la référence est
+#   l'Akademi Kreyòl Ayisyen (AKA, loi du 7 avril 2014) et l'orthographe officielle
+#   de 1980 (32 graphèmes, 1 son = 1 graphie, aucune lettre muette), confirmée par
+#   la « Premye rezolisyon sou òtograf kreyòl ayisyen an » (AKA, juin 2017).
+# --------------------------------------------------------------------------
+OTO = "Òtograf ofisyèl 1980 / AKA"
+AKA = "Akademi Kreyòl Ayisyen"
+Q_EXTRA = {
+"ht": [
+ ("A1","vocabulaire","« Mèsi » veut dire…",["merci","bonjour","au revoir","pardon"],"Mèsi = merci ; « mèsi anpil » = merci beaucoup.",""),
+ ("A1","vocabulaire","Comment dit-on « personne, gens » en kreyòl ?",["moun","zanmi","kay","liv"],"« moun » s'écrit avec le trigramme « oun », l'un des 32 graphèmes officiels.",OTO),
+ ("A1","grammaire","Comment dit-on « Il est malade » ?",["Li malad.","Li se malad.","Li ye malad.","Li te se malad."],"Devant un adjectif, pas de copule : « Li malad ». « Se » s'emploie devant un nom (« Li se doktè »).",""),
+ ("A1","comprehension","« Kote w rete ? » veut dire…",["Où habites-tu ?","Quand pars-tu ?","Comment vas-tu ?","Qui es-tu ?"],"Rete = habiter, rester ; « w » est la forme courte de « ou ».",""),
+ ("A2","grammaire","Comment dit-on « Je ne sais pas » ?",["M pa konnen.","M konnen pa.","Pa m konnen.","M pa t konnen."],"« pa » se place avant le verbe. « M pa t konnen » = je ne savais pas.",""),
+ ("A2","grammaire","Pluriel de « liv la » (le livre) :",["liv yo","liv las","yo liv","liv lan yo"],"Le déterminant pluriel « yo » remplace « la » après le nom.",""),
+ ("A2","vocabulaire","Le nombre 8 s'écrit…",["uit","wit","huit","ouit"],"Le graphème « ui » fait partie des 8 voyelles orales officielles (a, e, è, i, o, ò, ou, ui).",OTO),
+ ("A2","registre","Salutation polie de l'après-midi ou du soir :",["Bonswa, madam.","Sak pase, chè ?","Ey !","N ap boule."],"« Bonswa » s'utilise dès le début de l'après-midi ; « madam / mesye » marquent le respect.",""),
+ ("A2","culture","Quel plat est servi le 1er janvier pour célébrer l'indépendance ?",["Soup joumou","Diri ak pwa","Griyo","Akra"],"La soup joumou, symbole de liberté, est inscrite au patrimoine immatériel de l'UNESCO (2021).",""),
+ ("B1","grammaire","« Mwen konn manje mango » exprime…",["une habitude","un futur","une action en cours","une obligation"],"« konn » (konnen) devant un verbe = aspect habituel : j'ai l'habitude de manger des mangues.",""),
+ ("B1","grammaire","« M sot manje » signifie…",["Je viens de manger","Je vais manger","Je suis en train de manger","Je mangerais"],"« sot » (soti) = passé récent.",""),
+ ("B1","grammaire","Déterminant correct : « chen ___ » (le chien)",["an","la","a","nan"],"Après une voyelle nasale finale (« en ») : « an ».",""),
+ ("B1","grammaire","Déterminant correct : « fanm ___ » (la femme)",["nan","la","a","an"],"Après une consonne nasale (m, n) : « nan ».",""),
+ ("B1","vocabulaire","Combien de graphèmes compte l'alphabet officiel du kreyòl ayisyen ?",["32","26","24","40"],"12 voyelles, 18 consonnes et 2 semi-voyelles (w, y) : 32 graphèmes.",OTO),
+ ("B1","comprehension","« Pa gen pwoblèm, m ap vini demen. » — La personne…",["viendra demain","est venue hier","ne viendra pas","a un problème"],"« ap » + demen = futur ; « pa gen pwoblèm » = pas de problème.",""),
+ ("B1","registre","Pour demander poliment son chemin à un inconnu :",["Eskize m, èske w ka di m kote lopital la ye ?","Ey, kote lopital la ?","Lopital la, kote ?","Di m kote lopital la !"],"« Eskize m » + question en « èske » = formule polie.",""),
+ ("B2","grammaire","« Si m te konnen, m t ap vini. » exprime…",["un irréel du passé (je serais venu)","un futur certain","une habitude","un ordre"],"« te » dans la subordonnée + « t ap » dans la principale = conditionnel passé.",""),
+ ("B2","grammaire","Négation correcte de « M te ale » (j'étais allé) :",["M pa t ale.","M te pa ale.","Pa m te ale.","M ale pa."],"« pa » précède toujours les marqueurs (te → t).",""),
+ ("B2","grammaire","Quelle graphie est conforme à l'orthographe officielle ?",["lekòl","lécol","lekol","lecòl"],"Pas de « é » ni de « c » dans l'alphabet ; « ò » note le o ouvert.",OTO),
+ ("B2","grammaire","Pourquoi écrit-on « pèn » (peine) avec un accent grave ?",["Pour le distinguer de « pen » (pain), où « en » est une voyelle nasale","Par tradition française","Pour marquer l'accent tonique","C'est facultatif"],"Sans accent, « en » est une nasale ; « èn » se lit è + n. Un graphème = un son.",OTO),
+ ("B2","vocabulaire","« Tèt ansanm » signifie…",["solidarité, union","mal de tête","réunion de famille","fête nationale"],"Littéralement « têtes ensemble » : l'union qui fait la force.",""),
+ ("B2","culture","Quel article de la Constitution de 1987 prévoit la création d'une Académie du créole ?",["Article 213","Article 5","Article 1","Article 24"],"L'article 213 annonce l'Académie ; l'article 5 fait du kreyòl la langue commune et officielle.","Konstitisyon 1987"),
+ ("B2","comprehension","« Malgre lapli a, yo kontinye travay. » — Que s'est-il passé ?",["Ils ont continué à travailler malgré la pluie","Ils ont arrêté à cause de la pluie","Il n'a pas plu","Ils ont travaillé au soleil"],"Malgre = malgré ; kontinye = continuer.",""),
+ ("B2","registre","Formule de clôture adaptée à un courriel professionnel en kreyòl :",["Mèsi davans, ak tout respè m.","N a wè, monchè !","Ciao !","Bon, m ale."],"« Mèsi davans » (merci d'avance) et « respè » relèvent du registre professionnel.",""),
+ ("C1","culture","La loi portant création de l'Akademi Kreyòl Ayisyen date de…",["2014","1987","1979","2017"],"Loi du 7 avril 2014 ; l'Académie est installée en décembre 2014.",AKA),
+ ("C1","culture","Selon la loi, l'AKA compte…",["entre 33 et 55 akademisyen","exactement 12 membres","entre 100 et 200 membres","un membre par département"],"Article 21 de la loi : 33 à 55 membres, titre honorifique et non rémunéré.",AKA),
+ ("C1","culture","Laquelle est une mission de l'AKA fixée par la loi ?",["Garantir les droits linguistiques des Haïtiens et établir des normes pour le kreyòl","Remplacer le français dans la Caraïbe","Gérer les écoles privées","Organiser les élections"],"Elle est la référence du kreyòl oral et écrit et émet des recommandations orthographiques.",AKA),
+ ("C1","culture","En juin 2017, l'AKA a publié…",["sa première résolution sur l'orthographe du kreyòl","la première Constitution en kreyòl","un dictionnaire anglais-kreyòl","une loi sur l'éducation"],"« Premye rezolisyon sou òtograf kreyòl ayisyen an » ; une deuxième résolution a suivi en 2023.",AKA),
+ ("C1","grammaire","« Se manje li manje. » (clivage du prédicat) met l'accent sur…",["l'action elle-même : il a bel et bien mangé / il n'a fait que manger","le sujet","le lieu","le futur"],"La reprise du verbe après « se » focalise le procès — trait typique de la syntaxe du kreyòl.",""),
+ ("C1","grammaire","« Se Mari ki te rele w. » signifie…",["C'est Marie qui t'a appelé.","Marie t'appellera.","Marie s'appelle comme toi.","Appelle Marie."],"Mise en relief « se … ki » + passé « te ».",""),
+ ("C1","grammaire","Graphie standard de « je suis en train de manger » :",["M ap manje.","M'ap manjé.","Map manger.","Mwen apé manjé."],"Le « é » n'existe pas dans l'alphabet officiel ; le pronom court « m » s'écrit séparé du marqueur « ap ».",OTO),
+ ("C1","vocabulaire","« Pàn » (avec accent grave) signifie…",["panne","paon","pain","peine"],"« àn » se lit a + n (pàn = panne), tandis que « an » est nasal (pan = paon).",OTO),
+ ("C1","comprehension","« Lang kreyòl la se yon zouti tout Ayisyen pataje ; se poutèt sa, administrasyon piblik la dwe kominike ak pèp la nan lang li konprann nan. » — Idée principale :",["L'administration doit communiquer avec la population en kreyòl, langue commune","Le kreyòl est une langue étrangère","L'administration doit utiliser l'anglais","La population ne comprend pas le kreyòl"],"Se poutèt sa = c'est pourquoi ; dwe = devoir. Idée conforme à la mission de l'AKA.",""),
+ ("C2","culture","Premier roman écrit entièrement en kreyòl ayisyen (1975) :",["Dezafi, de Frankétienne","Gouverneurs de la rosée, de Jacques Roumain","Compère Général Soleil, de J. S. Alexis","Choucoune, d'Oswald Durand"],"Dezafi (1975) ; les autres œuvres citées sont en français (Choucoune est un poème).",""),
+ ("C2","culture","Félix Morisseau-Leroy est célèbre pour son adaptation en kreyòl de…",["Antigòn (Antigone de Sophocle)","Hamlet","Le Cid","Don Quichotte"],"Antigòn (1953), jalon du théâtre en kreyòl.",""),
+ ("C2","grammaire","Selon les principes de l'orthographe officielle, quelle affirmation est vraie ?",["Chaque graphème se prononce toujours de la même façon et aucune lettre n'est muette","Certaines lettres finales sont muettes comme en français","On écrit selon l'étymologie française","Le « h » est toujours muet"],"Trois principes : un son = une graphie, une graphie = un son, pas de lettre muette.",OTO),
+ ("C2","vocabulaire","Quel mot contient le trigramme « oun » ?",["moun","mouton","mont","boul"],"« oun » (moun, youn) est l'un des deux graphèmes à plusieurs lettres avec « ng ».",OTO),
+ ("C2","grammaire","« Li bèl bèl » (redoublement de l'adjectif) signifie…",["Elle est vraiment très belle","Elle est deux fois belle","Elle était belle","Elle sera belle"],"Le redoublement exprime l'intensité.",""),
+ ("C2","registre","Quel connecteur appartient au kreyòl écrit argumentatif ?",["Sepandan","Ey","Monchè","Anfòm"],"Sepandan = cependant ; s'emploie dans la presse, les essais et les textes officiels.",""),
+ ("C2","comprehension","Proverbe « Bourik travay, chwal galonnen » : sens ?",["Les uns travaillent, d'autres en récoltent les honneurs","Le cheval travaille plus que l'âne","Il faut soigner ses animaux","Le travail paie toujours"],"Littéralement : l'âne travaille, le cheval porte les galons.",""),
+],
+"en": [
+ ("C1","grammaire","Seldom ___ such dedication.",["have I seen","I have seen","I saw","did I saw"],"Adverbe négatif en tête (seldom, rarely) → inversion.",""),
+ ("C1","grammaire","Were I in your position, I ___ the offer.",["would accept","will accept","accepted","accept"],"Inversion conditionnelle formelle (= If I were…).",""),
+ ("C1","vocabulaire","'To be on the fence' means…",["to be undecided","to be in danger","to be outside","to be bored"],"Ne pas avoir pris parti.",""),
+ ("C1","registre","Most appropriate wording for a formal report: 'The results ___ that…'",["indicate","kinda show","show off","tell us, like,"],"Verbe neutre et précis, sans marques d'oralité.",""),
+ ("C1","comprehension","'The proposal was shelved.' — The proposal was…",["postponed indefinitely","approved","put on display","rewritten"],"To shelve = mettre de côté, reporter sine die.",""),
+ ("C2","vocabulaire","A 'Pyrrhic victory' is…",["a victory won at too great a cost","an easy victory","a shared victory","a legal victory"],"Du roi Pyrrhus d'Épire.",""),
+ ("C2","vocabulaire","'Notwithstanding' is closest in meaning to…",["despite","because of","in addition to","instead of"],"Registre juridique / soutenu.",""),
+ ("C2","culture","'We shall fight on the beaches' (1940) was delivered by…",["Winston Churchill","Neville Chamberlain","Franklin D. Roosevelt","Clement Attlee"],"Discours à la Chambre des communes, 4 juin 1940.",""),
+ ("C2","registre","Which sentence suits a legal contract?",["The Supplier shall deliver the goods within thirty (30) days.","The Supplier's gonna deliver in a month.","Supplier will try to deliver soon.","Goods coming in 30 days, hopefully."],"« shall » d'obligation, termes définis, chiffres en lettres.",""),
+ ("C2","comprehension","'Her remarks were nothing if not candid.' — Her remarks were…",["extremely frank","not frank at all","rude","unclear"],"« nothing if not » = extrêmement.",""),
+],
+"fr": [
+ ("C1","grammaire","Je doute qu'il ___ raison.",["ait","a","aura","avait"],"Douter que + subjonctif.",""),
+ ("C1","vocabulaire","« Être aux abois » signifie…",["être dans une situation désespérée","aboyer","être très heureux","être en avance"],"Image du cerf encerclé par la meute.",""),
+ ("C1","registre","Formule adaptée pour solliciter un entretien :",["Je me permets de solliciter un entretien afin de vous présenter ma candidature.","J'veux vous voir vite fait.","Faut qu'on cause.","Donnez-moi un rendez-vous."],"Registre professionnel : formule de politesse + objet clair.",""),
+ ("C1","comprehension","« La mesure a été entérinée sans coup férir. » — Elle a été…",["validée sans difficulté","rejetée violemment","reportée","contestée"],"Sans coup férir = sans rencontrer de résistance.",""),
+ ("C2","grammaire","« Il eût fallu qu'il vînt. » — « vînt » est au…",["subjonctif imparfait","passé simple","conditionnel passé","plus-que-parfait de l'indicatif"],"Concordance des temps littéraire.",""),
+ ("C2","grammaire","« Elles se sont ___ des cadeaux. »",["offert","offertes","offerts","offerte"],"Le COD (des cadeaux) est placé après : pas d'accord ; « se » est COI.",""),
+ ("C2","vocabulaire","« Sabler le champagne » signifie…",["boire du champagne pour fêter un événement","le refroidir dans le sable","le jeter","le servir mal"],"Expression figée et festive.",""),
+ ("C2","culture","Qui a écrit « Cahier d'un retour au pays natal » ?",["Aimé Césaire","Léopold Sédar Senghor","Frantz Fanon","Édouard Glissant"],"Œuvre fondatrice de la Négritude (1939).",""),
+ ("C2","registre","« Nonobstant les dispositions qui précèdent » relève du registre…",["juridique / soutenu","familier","argotique","oral courant"],"Lexique des contrats et textes officiels.",""),
+ ("C2","comprehension","« Son discours, pour brillant qu'il fût, ne convainquit personne. » — Le discours était…",["brillant mais peu convaincant","terne et convaincant","brillant et convaincant","inexistant"],"« pour + adj. + que » = concession (bien que).",""),
+],
+"es": [
+ ("C1","grammaire","Ojalá ___ venido ayer.",["hubieras","habías","has","habrías"],"Deseo irrealizable en el pasado → pluscuamperfecto de subjuntivo.",""),
+ ("C1","vocabulaire","« Estar en la luna de Valencia » significa…",["estar distraído","estar enamorado","viajar mucho","estar triste"],"Équivalent de « être dans la lune ».",""),
+ ("C1","registre","Fórmula adecuada para una petición formal :",["Le agradecería que me enviara la documentación.","Mándame los papeles, porfa.","Pásame eso.","Quiero los papeles ya."],"Condicional de cortesía + usted + subjuntivo.",""),
+ ("C1","comprehension","« El proyecto quedó en agua de borrajas. » — El proyecto…",["no llegó a nada","fue un éxito","se aprobó","se mojó"],"Quedar en agua de borrajas = tourner court.",""),
+ ("C2","vocabulaire","« Erre que erre » significa…",["con obstinación","por error","rápidamente","en voz baja"],"S'obstiner, ne pas en démordre.",""),
+ ("C2","grammaire","« De haberlo sabido, no habría venido » equivale a…",["Si lo hubiera sabido, no habría venido.","Como lo sabía, no vine.","Aunque lo sabía, vine.","Cuando lo supe, vine."],"« De + infinitivo compuesto » = condición irreal del pasado.",""),
+ ("C2","culture","¿Quién escribió « Pedro Páramo »?",["Juan Rulfo","Carlos Fuentes","Octavio Paz","Jorge Luis Borges"],"Novela mexicana de 1955.",""),
+ ("C2","registre","« Por la presente se hace constar que… » pertenece al registro…",["administrativo / jurídico","coloquial","juvenil","poético"],"Fórmula de certificados y documentos oficiales.",""),
+ ("C2","comprehension","« No es oro todo lo que reluce. » — Significa…",["las apariencias engañan","el oro es caro","todo brilla","hay que buscar oro"],"Proverbe : tout ce qui brille n'est pas or.",""),
+],
+}
+
 SKILL_AGENT = {"grammaire":"nova","vocabulaire":"nova","comprehension":"griot","culture":"griot","registre":"plume"}
 
 rows = []
 for lang, items in Q.items():
-    for i, (lvl, skill, q, opts, expl) in enumerate(items, 1):
+    items = [t + ("",) for t in items] + Q_EXTRA.get(lang, [])
+    for i, (lvl, skill, q, opts, expl, src) in enumerate(items, 1):
+        assert len(set(opts)) == len(opts), q
         rows.append({
             "id": f"{lang}-{i:03d}", "lang": lang, "level": lvl, "skill": skill,
             "agent": SKILL_AGENT[skill], "question": q, "options": "|".join(opts),
-            "answer": opts[0], "explanation": expl,
+            "answer": opts[0], "explanation": expl, "source": src,
         })
 
 def write(name, data):
@@ -216,6 +307,12 @@ CUL = [
  ("ht","proverbe","Sak vid pa kanpe","Un sac vide ne tient pas debout (on ne peut rien faire le ventre vide)","B1"),
  ("ht","fait","La soupe joumou est servie le 1er janvier pour célébrer l'indépendance","Inscrite au patrimoine immatériel de l'UNESCO en 2021","B1"),
  ("ht","fait","Le konbit est une tradition de travail collectif","Valeur de solidarité","B2"),
+ ("ht","fait","L'Akademi Kreyòl Ayisyen a été créée par la loi du 7 avril 2014 et installée en décembre 2014","Référence officielle pour la norme du kreyòl","C1"),
+ ("ht","fait","L'alphabet officiel compte 32 graphèmes : 1 son = 1 graphie, aucune lettre muette","Orthographe de 1980, confirmée par l'AKA (résolution de 2017)","B1"),
+ ("ht","fait","Dezafi (1975) de Frankétienne est le premier roman entièrement en kreyòl","Jalon de la littérature haïtienne","C1"),
+ ("ht","fait","Le 28 octobre est la Journée internationale du créole","Célébrée dans tout l'espace créolophone","B1"),
+ ("ht","expression","Tèt ansanm","Union, solidarité","B1"),
+ ("ht","proverbe","Bourik travay, chwal galonnen","Les uns travaillent, les autres récoltent les honneurs","C1"),
 ]
 write("culture.csv", [dict(lang=a, type=b, item=c, signification=d, level=e) for a,b,c,d,e in CUL])
 
@@ -255,6 +352,8 @@ SPE = [
  ("ht","MIT-Ayiti","Leçons et vidéos en kreyòl (sciences)",0,"courant / académique","B2","kreyòl académique","https://haiti.mit.edu"),
  ("ht","MIT OpenCourseWare","Inisyativ MIT-Ayiti (cours en kreyòl)",2023,"académique","B2","pédagogie en kreyòl","https://ocw.mit.edu/courses/res-24-002-mit-haiti-initiative-inisyativ-mit-ayiti-spring-2023"),
  ("ht","Wikipedya","Encyclopédie en kreyòl ayisyen",0,"écrit standard","B1","lecture authentique","https://ht.wikipedia.org"),
+ ("ht","Akademi Kreyòl Ayisyen","Premye rezolisyon sou òtograf kreyòl ayisyen an",2017,"officiel / normatif","C1","norme orthographique","https://www.communication.gouv.ht/2017/06/premye-rezolisyon-sou-otograf-kreyol-ayisyen-an/"),
+ ("ht","Akademi Kreyòl Ayisyen","Résolutions et publications (site officiel)",0,"officiel","C1","norme, droits linguistiques","https://akademikreyol.net"),
 ]
 def yt(q): return "https://www.youtube.com/results?search_query=" + q.replace(" ", "+")
 write("discours.csv", [dict(lang=a, orateur=b, titre=c, annee=d, registre=e, level=f, themes=g, url=h,
@@ -327,6 +426,10 @@ RES = [
  ("ht","culture","lecture","Wikipedya kreyòl","https://ht.wikipedia.org","B1","Lecture authentique"),
  ("ht","vocabulaire","dictionnaire","Potomitan – Diksyonè kreyòl (PDF)","https://www.potomitan.info/ayiti/berrouet-oriol/diksyone_kreyol.pdf","B1","Lexique kreyòl"),
  ("ht","culture","annuaire","HaitiHub – Haiti & Kreyòl on the web","https://haitihub.com/resources","A2","Annuaire de ressources"),
+ ("ht","registre","officiel","Akademi Kreyòl Ayisyen (site officiel)","https://akademikreyol.net","B1","Résolutions, normes et publications de l'AKA"),
+ ("ht","grammaire","officiel","AKA – Premye rezolisyon sou òtograf kreyòl ayisyen an (2017)","https://www.communication.gouv.ht/2017/06/premye-rezolisyon-sou-otograf-kreyol-ayisyen-an/","B1","Texte de la 1re résolution orthographique"),
+ ("ht","grammaire","guide","Espas Kreyòl – Ekri kreyòl fasil","https://espaskreyol.org/ekri-kreyol-fasil/","A1","Les 32 graphèmes et les 3 principes de l'orthographe officielle"),
+ ("ht","culture","officiel","Loi portant création de l'Académie du créole haïtien (2014)","https://axl.cefan.ulaval.ca/amsudant/haiti-loi-2014.htm","C1","Missions, composition et pouvoirs de l'AKA"),
 ]
 write("ressources.csv", [dict(lang=a, skill=b, type=c, titre=d, url=e, level_min=f, description=g) for a,b,c,d,e,f,g in RES])
 
@@ -340,6 +443,23 @@ VOC = {
 "ht": [("kay","maison"),("travay","travail"),("zanmi","ami"),("dlo","eau"),("liv","livre"),("vil","ville"),("reyinyon","réunion"),("lekòl","école"),("amelyore","améliorer"),("lajan","argent"),("manje","manger / nourriture"),("tan","temps / météo"),("vwayaj","voyage"),("fanmi","famille"),("mèsi","merci"),("souple","s'il vous plaît")],
 }
 write("vocabulaire.csv", [dict(lang=l, word=w, traduction=t, level="A1" if i < 8 else "B1") for l, pairs in VOC.items() for i,(w,t) in enumerate(pairs)])
+
+# --------------------------------------------------------------------------
+# 8 bis. ORTHOGRAPHE OFFICIELLE DU KREYÒL (32 graphèmes – référence AKA)
+# --------------------------------------------------------------------------
+OTO_ROWS = [
+ ("a","voyelle orale","papa","papa"),("e","voyelle orale","fe","faire"),("è","voyelle orale (e ouvert)","fè","fer / faire"),
+ ("i","voyelle orale","di","dire"),("o","voyelle orale","dodo","dormir (enfantin)"),("ò","voyelle orale (o ouvert)","lekòl","école"),
+ ("ou","voyelle orale","fou","fou"),("ui","voyelle orale","uit","huit"),
+ ("an","voyelle nasale","manman","maman"),("en","voyelle nasale","pen","pain"),("on","voyelle nasale","bon","bon"),("oun","voyelle nasale (trigramme)","moun","personne"),
+ ("b","consonne","bato","bateau"),("ch","consonne","chat","chat"),("d","consonne","dlo","eau"),("f","consonne","fanmi","famille"),
+ ("g","consonne (toujours dur)","gade","regarder"),("h","consonne (prononcée)","hont","honte"),("j","consonne","jaden","jardin"),
+ ("k","consonne","kay","maison"),("l","consonne","lavi","la vie"),("m","consonne","mache","marcher / marché"),("n","consonne","nou","nous"),
+ ("ng","consonne (digramme)","bilding","bâtiment"),("p","consonne","pitit","enfant"),("r","consonne","radyo","radio"),
+ ("s","consonne (toujours [s])","sèl","sel / seul"),("t","consonne","tab","table"),("v","consonne","vil","ville"),("z","consonne","zanmi","ami"),
+ ("w","semi-voyelle","wi","oui"),("y","semi-voyelle","yo","ils / les"),
+]
+write("orthographe_ht.csv", [dict(grapheme=a, type=b, exemple=c, sens=d) for a,b,c,d in OTO_ROWS])
 
 # --------------------------------------------------------------------------
 # 9. BADGES (gamification)

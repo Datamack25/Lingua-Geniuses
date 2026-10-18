@@ -13,7 +13,7 @@ import pandas as pd
 from . import storage as S
 from . import ml_engine as ML
 
-N_DIAG = 12
+N_DIAG = 15
 USAGE = {
     "A1": "Débutant — usage personnel élémentaire",
     "A2": "Élémentaire — usage personnel",
@@ -122,7 +122,11 @@ def build_exam(bank: pd.DataFrame, lang: str, level: str) -> list[dict]:
     target = pool[pool.level == level]
     below = pool[pool.level == S.LEVELS[max(0, i - 1)]] if i > 0 else pool.iloc[0:0]
     above = pool[pool.level == S.LEVELS[min(5, i + 1)]] if i < 5 else pool.iloc[0:0]
-    exam = pd.concat([target, below, above.sample(min(2, len(above)), random_state=1)])
+    # 20 questions max : 10 du niveau visé, 8 du niveau inférieur, 2 du niveau supérieur
+    rs = random.randint(0, 999)
+    exam = pd.concat([target.sample(min(10, len(target)), random_state=rs),
+                      below.sample(min(8, len(below)), random_state=rs),
+                      above.sample(min(2, len(above)), random_state=rs)])
     items = []
     for _, r in exam.sample(frac=1, random_state=random.randint(0, 999)).iterrows():
         q = r.to_dict()

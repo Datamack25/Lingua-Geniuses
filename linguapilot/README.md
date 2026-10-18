@@ -10,7 +10,7 @@ Stack : **Python · Streamlit · scikit-learn · Plotly · fpdf2 · HTML/CSS/Jav
 
 | Agent | Rôle | Ce qu'il fait |
 |---|---|---|
-| 🧭 **Atlas** | Diagnostic & Certification | Test de positionnement adaptatif (12 questions, méthode de l'escalier), niveau A1→C2 + usage (personnel, social, **professionnel**, **avancé**, expert), évaluation certifiante, certificat PDF avec n° de vérification |
+| 🧭 **Atlas** | Diagnostic & Certification | Test de positionnement adaptatif (15 questions, méthode de l'escalier), niveau A1→C2 + usage (personnel, social, **professionnel**, **avancé**, expert), évaluation certifiante, certificat PDF avec n° de vérification |
 | 🧱 **Nova** | Grammaire & Vocabulaire | Exercices choisis par ML (~70 % de réussite visée), répétition espacée, flashcards, **arcade HTML/JS** chronométrée avec combos |
 | 🎧 **Griot** | Compréhension & Culture | Grands discours (American Rhetoric, Miller Center, Vie publique, Nobel…), histoires originales, **chansons populaires** (références + activités), proverbes, expressions, faits culturels |
 | ✍️ **Plume** | Expression & Registres | Analyse d'écrit selon 4 critères CECRL (étendue, correction, cohérence, adéquation), registres **soutenu / courant / familier / professionnel**, défis de registre |
@@ -90,6 +90,10 @@ Plume ajoute alors un retour rédigé (niveau, points forts, corrections) à l'a
 ## ✏️ Enrichir les contenus
 
 Modifiez les listes dans `scripts/build_content.py` puis `python scripts/build_content.py`, ou éditez directement les CSV de `data/content/` (la bonne réponse d'une question est stockée dans la colonne `answer` et doit figurer dans `options`, séparées par `|`).
+
+## 🇭🇹 Kreyòl : référentiel Akademi Kreyòl Ayisyen
+
+La banque créole (66 questions, A1 → C2) s'appuie sur l'**orthographe officielle de 1980** (32 graphèmes ; 1 son = 1 graphie ; aucune lettre muette), confirmée par la *Premye rezolisyon sou òtograf kreyòl ayisyen an* de l'**AKA** (juin 2017), et sur la loi du 7 avril 2014 qui crée l'Académie. Les questions concernées portent une étiquette 📜 source. Plume propose un onglet **Òtograf ofisyèl (AKA)** (tableau des graphèmes + entraînement) et signale les lettres hors alphabet et les formes courtes mal écrites.
 
 ## ⚖️ Notes
 

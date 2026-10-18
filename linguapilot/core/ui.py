@@ -57,6 +57,30 @@ div[data-testid="stMetric"] { background:#fff; border:1px solid var(--line); bor
 .xpbar i { display:block; height:100%; background: var(--gold); }
 .small { color:var(--muted); font-size:.85rem; }
 footer { visibility: hidden; }
+/* bandeau noir Streamlit : supprimé (on garde seulement le bouton d'ouverture de la barre latérale) */
+header[data-testid="stHeader"] { background: transparent !important; height: 0 !important; }
+[data-testid="stToolbar"], [data-testid="stDecoration"], [data-testid="stStatusWidget"] { display: none !important; }
+[data-testid="stHeaderActionElements"], .hero h1 a { display: none !important; }
+.block-container { padding-top: 1rem; }
+/* panneau de connexion / inscription : fond bleu nuit, textes blancs */
+.st-key-authbox { background: linear-gradient(160deg,#14213D 0%,#1B2E52 100%); border-radius: 20px; padding: 20px 22px; }
+.st-key-authbox, .st-key-authbox label, .st-key-authbox p, .st-key-authbox span,
+.st-key-authbox [data-testid="stWidgetLabel"] * , .st-key-authbox .stCaption, .st-key-authbox small { color: #FFFFFF !important; }
+.st-key-authbox .stTabs [data-baseweb="tab"] { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.2); }
+.st-key-authbox .stTabs [data-baseweb="tab"] * { color:#FFFFFF !important; }
+.st-key-authbox .stTabs [aria-selected="true"] { background: #C9A227 !important; }
+.st-key-authbox .stTabs [aria-selected="true"] * { color:#14213D !important; }
+.st-key-authbox [data-testid="stForm"] { border-color: rgba(255,255,255,.18); }
+.st-key-authbox input, .st-key-authbox textarea, .st-key-authbox div[data-baseweb="input"],
+.st-key-authbox div[data-baseweb="base-input"], .st-key-authbox div[data-baseweb="select"] > div {
+    background: rgba(255,255,255,.10) !important; color: #FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important;
+    border-color: rgba(255,255,255,.25) !important; caret-color: #FFFFFF; }
+.st-key-authbox input::placeholder { color: rgba(255,255,255,.6) !important; }
+.st-key-authbox svg { fill: #FFFFFF !important; }
+.st-key-authbox .stButton > button, .st-key-authbox [data-testid="stFormSubmitButton"] button {
+    background:#C9A227 !important; border-color:#C9A227 !important; }
+.st-key-authbox .stButton > button *, .st-key-authbox [data-testid="stFormSubmitButton"] button * { color:#14213D !important; font-weight:800; }
+.st-key-authbox hr { border-color: rgba(255,255,255,.2); }
 </style>
 """
 
@@ -92,7 +116,7 @@ def agent_banner(a, text: str):
 
 def resource_list(df):
     icons = {"vidéo": "🎬", "audio": "🎧", "site": "🌐", "guide": "📘", "discours": "🎤", "outil": "🛠️",
-             "dictionnaire": "📖", "lecture": "📰", "cours": "🎓", "archives": "🗄️", "annuaire": "🗂️"}
+             "dictionnaire": "📖", "lecture": "📰", "cours": "🎓", "archives": "🗄️", "annuaire": "🗂️", "officiel": "🏛️"}
     out = ""
     for _, r in df.iterrows():
         out += (f'<div class="res"><span style="font-size:1.3rem">{icons.get(r.type, "🔗")}</span><div>'

@@ -110,6 +110,15 @@ def analyze(text: str, lang: str, target_register: str = "courant") -> dict:
             continue
         if msg and re.search(pat, text, flags=re.I if pat != r"\bi\b" else 0):
             issues.append(msg)
+    if lang == "ht":
+        # alphabet officiel (32 graphèmes) : pas de c (hors ch), q, x, é, ê, â, î, ô, û, ç, ë
+        bad = sorted({w for w in words if re.search(r"c(?!h)|[qxéêâîôûçëœ]", w)})
+        if bad:
+            issues.append("Lettres hors de l'alphabet officiel (orthographe 1980 / AKA) dans : « "
+                          + " », « ".join(bad[:6]) + " » — ex. « lécol » → « lekòl », « qui » → « ki ».")
+        fused = re.findall(r"\b(?:m|w|l|n|y)'(?:ap|te|pral|ta)\b", text.lower())
+        if fused:
+            issues.append("Formes courtes : écrivez le pronom séparé du marqueur (« m ap », « l te »), sans apostrophe.")
     if sents and any(s.strip()[0].islower() for s in sents if s.strip()[0].isalpha()):
         issues.append("Certaines phrases ne commencent pas par une majuscule.")
     if "  " in text:

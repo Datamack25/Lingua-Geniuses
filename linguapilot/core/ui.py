@@ -119,6 +119,8 @@ header[data-testid="stHeader"] { background: transparent !important; height: 0 !
 .stApp .st-key-authbox input, .stApp .st-key-authbox div[data-baseweb="select"] *,
 .stApp .st-key-authbox div[data-baseweb="input"] * {
     color: #14213D !important; -webkit-text-fill-color: #14213D !important; caret-color: #14213D; }
+.stApp .st-key-authbox [data-testid="InputInstructions"], .stApp .st-key-authbox [data-testid="InputInstructions"] * {
+    color: #14213D !important; -webkit-text-fill-color: #14213D !important; }
 .stApp .st-key-authbox input::placeholder { color: #6B7280 !important; -webkit-text-fill-color: #6B7280 !important; }
 .stApp .st-key-authbox div[data-baseweb="select"] svg, .stApp .st-key-authbox div[data-baseweb="input"] svg,
 .stApp .st-key-authbox button[aria-label] svg { fill: #14213D !important; }

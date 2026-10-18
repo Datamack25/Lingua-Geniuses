@@ -62,6 +62,42 @@ header[data-testid="stHeader"] { background: transparent !important; height: 0 !
 [data-testid="stToolbar"], [data-testid="stDecoration"], [data-testid="stStatusWidget"] { display: none !important; }
 [data-testid="stHeaderActionElements"], .hero h1 a { display: none !important; }
 .block-container { padding-top: 1rem; }
+/* ---- thème clair forcé (même si le navigateur / Streamlit est en mode sombre) ---- */
+.stMain, .stMain p, .stMain li, .stMain label, .stMain span, .stMain div[data-testid="stMarkdownContainer"],
+.stMain [data-testid="stWidgetLabel"] *, .stMain [data-testid="stCaptionContainer"],
+.stMain [data-testid="stMetricLabel"] *, .stMain [data-testid="stMetricValue"], .stMain [data-testid="stMetricValue"] * ,
+.stMain [data-testid="stExpander"] summary *, .stMain [data-baseweb="tab"] * { color: var(--ink); }
+.stMain h1, .stMain h2, .stMain h3, .stMain h4, .stMain h5 { color: var(--navy) !important; }
+.stMain [data-testid="stMetricValue"] { color: var(--navy) !important; }
+.stMain [data-testid="stMetricLabel"] * { color: var(--muted) !important; }
+.stMain .small, .stMain .card p, .stMain [data-testid="stCaptionContainer"] { color: var(--muted) !important; }
+.stMain input, .stMain textarea, .stMain div[data-baseweb="input"], .stMain div[data-baseweb="base-input"],
+.stMain div[data-baseweb="select"] > div, .stMain div[data-baseweb="textarea"] {
+    background: #FFFFFF !important; color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+    border-color: var(--line) !important; }
+.stMain [data-testid="stExpander"] details { background:#FFFFFF; border-color: var(--line); border-radius:14px; }
+.stMain [data-testid="stForm"] { background:#FFFFFF; border-color: var(--line); border-radius:16px; }
+.stMain .stTabs [aria-selected="true"] * { color:#FFFFFF !important; }
+.stMain .stButton > button, .stMain [data-testid="stDownloadButton"] button, .stMain [data-testid="stFormSubmitButton"] button {
+    background:#FFFFFF; color: var(--navy); }
+.stMain .stButton > button *, .stMain [data-testid="stDownloadButton"] button * { color: var(--navy); }
+.stMain .stButton > button[kind="primary"], .stMain [data-testid="stDownloadButton"] button[kind="primary"],
+.stMain [data-testid="stFormSubmitButton"] button[kind="primaryFormSubmit"] { background: var(--teal) !important; border-color: var(--teal) !important; }
+.stMain .stButton > button[kind="primary"] *, .stMain [data-testid="stDownloadButton"] button[kind="primary"] *,
+.stMain [data-testid="stFormSubmitButton"] button[kind="primaryFormSubmit"] * { color:#FFFFFF !important; }
+.stMain .hero h1, .stMain .hero p, .stMain .lvl, .stMain .feedback-ok *, .stMain .feedback-ko * { color: inherit; }
+.stMain .hero h1 { color:#FFFFFF !important; } .stMain .hero p { color:#E0F2FE !important; } .stMain .lvl { color:#FFFFFF !important; }
+.stMain .feedback-ok, .stMain .feedback-ok * { color:#065F46 !important; }
+.stMain .feedback-ko, .stMain .feedback-ko * { color:#9A3412 !important; }
+.stMain .tag { color:#3730A3; } .stMain .tag.gold { color:#92400E !important; } .stMain .tag.teal { color:#155E75 !important; }
+.stMain .tag.green { color:#065F46 !important; } .stMain .tag.pink { color:#9D174D !important; }
+.stMain .res a { color: var(--teal) !important; }
+.lp-table { overflow-x:auto; border:1px solid var(--line); border-radius:14px; background:#FFFFFF; margin-bottom:8px; }
+.lp-table table { width:100%; border-collapse:collapse; font-size:.92rem; }
+.lp-table th { background: var(--navy); color:#FFFFFF !important; text-align:left; padding:10px 12px; font-weight:700; }
+.lp-table td { padding:9px 12px; border-top:1px solid var(--line); color: var(--ink) !important; }
+.lp-table tr:nth-child(even) td { background:#FAFAF7; }
+
 /* panneau de connexion / inscription : fond bleu nuit, textes blancs */
 .st-key-authbox { background: linear-gradient(160deg,#14213D 0%,#1B2E52 100%); border-radius: 20px; padding: 20px 22px; }
 .st-key-authbox, .st-key-authbox label, .st-key-authbox p, .st-key-authbox span,
@@ -123,6 +159,14 @@ def resource_list(df):
                 f'<a href="{esc(r.url)}" target="_blank">{esc(r.titre)}</a><br>'
                 f'<small>{esc(r.description)} · dès {esc(r.level_min)} · {esc(r.skill)}</small></div></div>')
     st.markdown(out or '<p class="small">Aucune ressource.</p>', unsafe_allow_html=True)
+
+
+def table(df, **_):
+    """Tableau HTML clair (lisible quel que soit le thème du navigateur)."""
+    head = "".join(f"<th>{esc(c)}</th>" for c in df.columns)
+    body = "".join("<tr>" + "".join(f"<td>{esc(v)}</td>" for v in row) + "</tr>" for row in df.itertuples(index=False))
+    st.markdown(f'<div class="lp-table"><table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>',
+                unsafe_allow_html=True)
 
 
 def level_badge(level: str, label: str, usage: str):

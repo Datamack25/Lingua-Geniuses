@@ -1,0 +1,73 @@
+name: LinguaPilot Android (APK)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'linguapilot-android/android/**'
+      - '.github/workflows/android-apk.yml'
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: linguapilot-android/android
+    env:
+      LINGUAPILOT_URL: ${{ vars.LINGUAPILOT_URL }}
+      HAS_KEYSTORE: ${{ secrets.ANDROID_KEYSTORE_BASE64 != '' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: android-actions/setup-android@v3
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Compiler l'APK de test (debug)
+        run: gradle assembleDebug --no-daemon
+
+      - name: Préparer la clé de signature (optionnel)
+        if: env.HAS_KEYSTORE == 'true'
+        run: |
+          echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 -d > "$RUNNER_TEMP/linguapilot.jks"
+          echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/linguapilot.jks" >> "$GITHUB_ENV"
+
+      - name: Compiler l'APK signé (release)
+        if: env.HAS_KEYSTORE == 'true'
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: gradle assembleRelease --no-daemon
+
+      - name: Renommer les APK
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/dist"
+          cp app/build/outputs/apk/debug/app-debug.apk "$GITHUB_WORKSPACE/dist/LinguaPilot-debug.apk"
+          if [ -f app/build/outputs/apk/release/app-release.apk ]; then
+            cp app/build/outputs/apk/release/app-release.apk "$GITHUB_WORKSPACE/dist/LinguaPilot.apk"
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LinguaPilot-APK
+          path: dist/*.apk
+
+      - name: Publier une release GitHub (sur tag v*)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.apk

@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.application'
+}
+
+def appUrl = (System.getenv('LINGUAPILOT_URL') ?: project.findProperty('LINGUAPILOT_URL') ?: 'https://linguapilot.streamlit.app').toString().trim()
+def ciVersionCode = (System.getenv('GITHUB_RUN_NUMBER') ?: '1').toInteger()
+
+android {
+    namespace 'com.linguapilot.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.linguapilot.app'
+        minSdk 26
+        targetSdk 34
+        versionCode ciVersionCode
+        versionName "1.0.${ciVersionCode}"
+        buildConfigField 'String', 'APP_URL', "\"${appUrl}\""
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    // Signature optionnelle de la version release (secrets GitHub, voir README).
+    def ksPath = System.getenv('ANDROID_KEYSTORE_PATH')
+    if (ksPath != null && file(ksPath).exists()) {
+        signingConfigs {
+            release {
+                storeFile file(ksPath)
+                storePassword System.getenv('ANDROID_KEYSTORE_PASSWORD')
+                keyAlias System.getenv('ANDROID_KEY_ALIAS')
+                keyPassword System.getenv('ANDROID_KEY_PASSWORD')
+            }
+        }
+        buildTypes.release.signingConfig signingConfigs.release
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+}

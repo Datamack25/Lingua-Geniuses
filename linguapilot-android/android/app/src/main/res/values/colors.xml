@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lp_primary">#4F46E5</color>
+    <color name="lp_primary_dark">#3730A3</color>
+    <color name="lp_accent">#F59E0B</color>
+    <color name="lp_background">#F8FAFC</color>
+    <color name="lp_text">#0F172A</color>
+    <color name="lp_text_muted">#475569</color>
+    <color name="ic_launcher_background">#4F46E5</color>
+</resources>

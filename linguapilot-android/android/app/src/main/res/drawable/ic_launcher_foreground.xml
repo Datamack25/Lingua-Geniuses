@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Icône LinguaPilot : deux bulles de dialogue (deux langues qui se répondent) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Bulle arrière (ambre) -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M48,34h24a8,8 0,0 1,8 8v16a8,8 0,0 1,-8 8h-2v7l-8,-7h-14a8,8 0,0 1,-8 -8v-16a8,8 0,0 1,8 -8z" />
+
+    <!-- Bulle avant (blanche) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,42h26a8,8 0,0 1,8 8v16a8,8 0,0 1,-8 8h-16l-9,8v-8h-1a8,8 0,0 1,-8 -8v-16a8,8 0,0 1,8 -8z" />
+
+    <!-- Trois points dans la bulle blanche -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M37,58a3.5,3.5 0,1 0,7 0a3.5,3.5 0,1 0,-7 0z M43.5,58a3.5,3.5 0,1 0,7 0a3.5,3.5 0,1 0,-7 0z M50,58a3.5,3.5 0,1 0,7 0a3.5,3.5 0,1 0,-7 0z" />
+</vector>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LinguaPilot</string>
+    <string name="offline_title">Pas de connexion</string>
+    <string name="offline_body">LinguaPilot a besoin d\'Internet pour charger tes leçons. Vérifie ta connexion puis réessaie.</string>
+    <string name="retry">Réessayer</string>
+    <string name="press_again">Appuie encore sur retour pour quitter</string>
+    <string name="no_app">Aucune application ne peut ouvrir ce lien</string>
+    <string name="mic_denied">Micro refusé : les exercices de prononciation ne pourront pas t\'écouter</string>
+    <string name="downloading">Téléchargement de %1$s…</string>
+    <string name="saved">%1$s enregistré dans Téléchargements/LinguaPilot</string>
+    <string name="save_failed">Impossible d\'enregistrer le fichier</string>
+    <string name="retry_download">Autorisation accordée, relance le téléchargement</string>
+</resources>
